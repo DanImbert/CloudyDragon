@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LiquidContainer : MonoBehaviour
+public class LIquidContainer : MonoBehaviour
 {
     Material mat;
     MeshRenderer mesh;
     [Range(0,1)] public float Fill = .5f;
-    public Vector2 Volume;
+    public Vector2 Dimensions;
+    public float Volume = 0;
     public LiquidSO myLiquid;
 
     private void Awake()
@@ -15,7 +16,9 @@ public class LiquidContainer : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
         mat = Material.Instantiate(mesh.material);
         mesh.material = mat;
-        Volume = new Vector2(transform.lossyScale.y*.33f, transform.lossyScale.x)+Vector2.one*.01f;
+        Dimensions = new Vector2(transform.lossyScale.y, transform.lossyScale.x)+Vector2.one*.01f;
+        Volume =  Dimensions.x * Dimensions.x * Mathf.PI * Dimensions.y;
+        Dimensions.x*=0.33f;
     }
     private void Start()
     {
@@ -33,14 +36,15 @@ public class LiquidContainer : MonoBehaviour
         mesh.material.SetColor("_TopColor", myLiquid.RimColor);
         mesh.material.SetColor("_FoamColor", myLiquid.FoamColor);
         mesh.material.SetFloat("_Rim", 0);
+        UpdateMaterial();
     }
-    private void Update()
+    private void UpdateMaterial()
     {
         if (Fill > 0)
         {
             mesh.enabled = true;
             float fill = Mathf.Abs(transform.up.y);
-            fill = Mathf.Abs(fill * Volume.y + (1 - fill) * Volume.x);
+            fill = Mathf.Abs(fill * Dimensions.y + (1 - fill) * Dimensions.x);
             fill *= (-.5f + (1 - Fill) * 2);
             mesh.material.SetFloat("_FillAmount", fill);
         }
@@ -48,5 +52,24 @@ public class LiquidContainer : MonoBehaviour
         {
             mesh.enabled = false;
         }
+    }
+    public float SubstractVolume(float svolume)
+    {
+        svolume *= 1/Volume;
+        if (Fill<svolume)
+        {
+            svolume = Fill;
+        }
+        Fill -= svolume;
+        UpdateMaterial();
+        return svolume;
+    }
+    public void AddLiquid()
+    {
+
+    }
+    public void TransferLiquid()
+    {
+
     }
 }
