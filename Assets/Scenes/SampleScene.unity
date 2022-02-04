@@ -501,7 +501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f535670c4e36645b8d8b6b66d1d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {x: 0, y: 0}
+  Fill: 0.5
+  Volume: {x: 1.66, y: 1}
   myLiquid: {fileID: 11400000, guid: ed8e09100abe4224c841bdf91ed2a655, type: 2}
 --- !u!114 &1511750811
 MonoBehaviour:
@@ -808,7 +809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f535670c4e36645b8d8b6b66d1d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {x: 0, y: 0}
+  Fill: 0.5
+  Volume: {x: 1.25, y: 1.5}
   myLiquid: {fileID: 11400000, guid: 2ba46bd71b0405e49be65dfd3179034a, type: 2}
 --- !u!1 &2128687528
 GameObject:

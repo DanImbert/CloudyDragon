@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LIquidContainer : MonoBehaviour
+public class LiquidContainer : MonoBehaviour
 {
     Material mat;
     MeshRenderer mesh;
@@ -15,10 +15,10 @@ public class LIquidContainer : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
         mat = Material.Instantiate(mesh.material);
         mesh.material = mat;
+        Volume = new Vector2(transform.lossyScale.y*.33f, transform.lossyScale.x)+Vector2.one*.01f;
     }
     private void Start()
     {
-
         if (myLiquid!=null)
             ChangeLiquid(myLiquid);
     }
@@ -36,7 +36,17 @@ public class LIquidContainer : MonoBehaviour
     }
     private void Update()
     {
-        float fill = Volume.y - (Fill-.5f)*2;
-        mesh.material.SetFloat("_FillAmount", fill);
+        if (Fill > 0)
+        {
+            mesh.enabled = true;
+            float fill = Mathf.Abs(transform.up.y);
+            fill = Mathf.Abs(fill * Volume.y + (1 - fill) * Volume.x);
+            fill *= (-.5f + (1 - Fill) * 2);
+            mesh.material.SetFloat("_FillAmount", fill);
+        }
+        else
+        {
+            mesh.enabled = false;
+        }
     }
 }
