@@ -25,16 +25,51 @@ public class LIquidContainer : MonoBehaviour
     {
         InitContents();
     }
-   void ChangeColor(LiquidSO nLiquid)
+    private void Update()
     {
-        myLiquid = nLiquid;
-        mesh.material.SetColor("_Tint", myLiquid.BodyColor);
-        mesh.material.SetColor("_RimColor", myLiquid.RimColor);
-        mesh.material.SetFloat("_RimPower", myLiquid.RimStrength);
+        UpdateFoam();
+    }
+    void ChangeColor()
+    {
 
-        mesh.material.SetColor("_TopColor", myLiquid.RimColor);
-        mesh.material.SetColor("_FoamColor", myLiquid.FoamColor);
-        mesh.material.SetFloat("_Rim", 0);
+        Color BodyColor = Color.black;
+        Color RimColor = Color.black;
+        Color FoamColor = Color.black ;
+
+        float RimStrength = 0;
+        foamStrength = 0;
+
+        foreach (KeyValuePair<LiquidSO, float> liquid in contents)
+        {
+            if (liquid.Value > 0)
+            {
+                float percent = liquid.Value / totalVolume;
+
+                BodyColor.r += liquid.Key.BodyColor.r * percent;
+                BodyColor.g += liquid.Key.BodyColor.g * percent;
+                BodyColor.b += liquid.Key.BodyColor.b * percent;
+
+                RimColor.r += liquid.Key.RimColor.r * percent;
+                RimColor.g += liquid.Key.RimColor.g * percent;
+                RimColor.b += liquid.Key.RimColor.b * percent;
+
+                FoamColor.r += liquid.Key.FoamColor.r * percent;
+                FoamColor.g += liquid.Key.FoamColor.g * percent;
+                FoamColor.b += liquid.Key.FoamColor.b * percent;
+
+                RimStrength += liquid.Key.RimStrength * percent;
+                foamStrength += liquid.Key.Foaming * percent;
+
+            }
+        }
+
+
+        mesh.material.SetColor("_Tint", BodyColor);
+        mesh.material.SetColor("_RimColor", RimColor);
+        mesh.material.SetFloat("_RimPower", RimStrength);
+
+        mesh.material.SetColor("_TopColor", RimColor);
+        mesh.material.SetColor("_FoamColor", FoamColor);
         UpdateMaterial();
     }
     public float totalVolume = 0;
@@ -83,7 +118,7 @@ public class LIquidContainer : MonoBehaviour
     {
         totalVolume = GetTotalVolume();
         if (color)
-         ChangeColor(myLiquid);
+         ChangeColor();
     }
     public bool SubstractVolume(float amount)
     {
@@ -157,6 +192,20 @@ public class LIquidContainer : MonoBehaviour
     public float GetVolumeContentPercentage(LiquidSO liquid)
     {
         return GetVolumeContent(liquid)/Volume;
+    }
+
+    #endregion
+    #region Foam
+    float foaming = 0;
+    float foamStrength = 0f;
+    public void IncreaseFoam()
+    {
+
+    }
+    public void UpdateFoam()
+    {
+
+        mesh.material.SetFloat("_Rim", foaming);
     }
 
     #endregion

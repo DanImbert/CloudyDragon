@@ -20,7 +20,7 @@ public class EndGameScreenController : MonoBehaviour
         foreach (RecipeSO.CocktailMix component in GameController.main.winCondition.Requirements)
         {
             float delta = Mathf.Abs(component.Percentage - cocktailFinal.GetVolumeContent(component.Spirit));
-            score /= delta / (component.Percentage );
+            score -= delta * 5;
         }
         for (int I=0; I< ScoreView.transform.childCount; I++)
         {
