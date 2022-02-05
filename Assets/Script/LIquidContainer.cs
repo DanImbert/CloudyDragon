@@ -6,7 +6,8 @@ public class LIquidContainer : MonoBehaviour
 {
     Material mat;
     MeshRenderer mesh;
-    [Range(0,1)] public float Fill = .5f;
+    [Range(0, 1)] public float Fill = .5f;
+    [Range(0, 1)] public float FillPercent = 1;
     public Vector2 Dimensions;
     public float Volume = 0;
     public LiquidSO myLiquid;
@@ -58,7 +59,7 @@ public class LIquidContainer : MonoBehaviour
             mesh.enabled = true;
             float fill = Mathf.Abs(transform.up.y);
             fill = Mathf.Abs(fill * Dimensions.y + (1 - fill) * Dimensions.x);
-            fill *= (-.5f + (1 - Fill) * 2);
+            fill *= (-.5f + (1 - Fill * FillPercent) * 2);
             mesh.material.SetFloat("_FillAmount", fill);
         }
         else
@@ -76,12 +77,13 @@ public class LIquidContainer : MonoBehaviour
         {
             AddLiquid(myLiquid, Volume * Fill) ;
         }
-        OnVolumeChange();
+        OnVolumeChange(true);
     }
-    public void OnVolumeChange()
+    public void OnVolumeChange(bool color)
     {
         totalVolume = GetTotalVolume();
-        ChangeColor(myLiquid);
+        if (color)
+         ChangeColor(myLiquid);
     }
     public bool SubstractVolume(float amount)
     {
@@ -102,7 +104,7 @@ public class LIquidContainer : MonoBehaviour
         {
             SubstractLiquid(substract.Key, substract.Value);
         }
-        OnVolumeChange();
+        OnVolumeChange(false);
             return isEmpty;
     }
     public void  SubstractLiquid(LiquidSO liquid, float amount)
@@ -143,8 +145,18 @@ public class LIquidContainer : MonoBehaviour
         {
             SubstractLiquid(substracted.Key, substracted.Value);
         }
-        OnVolumeChange();
-        cOther.OnVolumeChange();
+        OnVolumeChange(false);
+        cOther.OnVolumeChange(true);
+    }
+    public float GetVolumeContent(LiquidSO liquid)
+    {
+        if (contents.ContainsKey(liquid))
+            return contents[liquid];
+        return 0;
+    }
+    public float GetVolumeContentPercentage(LiquidSO liquid)
+    {
+        return GetVolumeContent(liquid)/Volume;
     }
 
     #endregion

@@ -16,6 +16,8 @@ public class LiquidReciever : MonoBehaviour
         if (other.TryGetComponent<LiquidPourer>(out LiquidPourer pourer))
         {
             pourer.TransferLiquid(myContainer);
+            if (myContainer.GetFillPercent() >= 1)
+                GameController.main.EndTheGame(myContainer);
         }
     }
 }

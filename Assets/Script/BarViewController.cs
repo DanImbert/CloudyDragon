@@ -28,4 +28,8 @@ public class BarViewController : MonoBehaviour
     {
         animator.SetBool("Pouring", false);
     }
+    public void OnVictory()
+    {
+        animator.Play("Victory");
+    }
 }

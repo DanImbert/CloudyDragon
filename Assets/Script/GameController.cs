@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController main;
+    public RecipeSO winCondition;
     public GameObject BarViewMenu;
     public GameObject ShelfViewMenu;
+    public EndGameScreenController EndGameScreen;
     public ShelfViewController ShelfView;
     public BarViewController BarView;
 
+    private void Awake()
+    {
+        main = this;
+    }
     private void Start()
     {
         GoToShelfView();
@@ -16,21 +23,31 @@ public class GameController : MonoBehaviour
 
     public void GoToBarView()
     {
-        ChangeView(true);
+        ChangeView(Window.bar);
     }
     public void GoToShelfView()
     {
-        ChangeView(false);
+        ChangeView(Window.shelf);
     }
-    void ChangeView(bool bar)
+    enum Window
     {
-        BarViewMenu.gameObject.SetActive(bar);
-        BarView.gameObject.SetActive(bar);
-        ShelfView.gameObject.SetActive(!bar);
-        ShelfViewMenu.gameObject.SetActive(!bar);
+        bar,
+        shelf,
+        endgame
     }
-    public void EndTheGame()
+    void ChangeView(Window view)
     {
-
+        BarViewMenu.gameObject.SetActive(view == Window.bar);
+        BarView.gameObject.SetActive(view == Window.bar || view == Window.endgame);
+        ShelfView.gameObject.SetActive(view == Window.shelf);
+        ShelfViewMenu.gameObject.SetActive(view == Window.shelf);
+        ShelfViewMenu.gameObject.SetActive(view == Window.shelf);
+        EndGameScreen.gameObject.SetActive(view == Window.endgame);
+    }
+    public void EndTheGame(LIquidContainer cocktailFinal)
+    {
+        ChangeView(Window.endgame);
+        EndGameScreen.AssessDrink(cocktailFinal);
+        BarView.OnVictory();
     }
 }
