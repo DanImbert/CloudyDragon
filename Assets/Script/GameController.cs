@@ -16,10 +16,11 @@ public class GameController : MonoBehaviour
 
     public void GoToBarView()
     {
+        ChangeView(true);
     }
     public void GoToShelfView()
     {
-
+        ChangeView(false);
     }
     void ChangeView(bool bar)
     {

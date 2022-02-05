@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxWobble: 0.01
-  WobbleSpeed: 0.5
-  Recovery: 1
+  WobbleSpeed: 0.33
+  Recovery: 3
 --- !u!114 &612035782720805330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4045,7 +4045,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.75
       minScalar: 0
       maxCurve:
         serializedVersion: 2

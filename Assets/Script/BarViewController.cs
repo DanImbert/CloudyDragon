@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class BarViewController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject DrinkController;
+    Animator animator;
+    void Awake()
     {
-        
+        animator = DrinkController.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    bool pouring = false;
     void Update()
     {
-        
+        pouring = false;
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase > TouchPhase.Began)
+            {
+                pouring = true;
+            }
+        }
+        animator.SetBool("Pouring", pouring);
     }
 }
