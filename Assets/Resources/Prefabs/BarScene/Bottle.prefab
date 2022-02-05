@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 612035782720805329}
   - component: {fileID: 612035782720805330}
   m_Layer: 0
-  m_Name: Liquid
+  m_Name: Bottle Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,10 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f535670c4e36645b8d8b6b66d1d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fill: 0.5
+  Fill: 1
+  FillPercent: 1
   Dimensions: {x: 0, y: 0}
   Volume: 0
   myLiquid: {fileID: 11400000, guid: 2ba46bd71b0405e49be65dfd3179034a, type: 2}
+  totalVolume: 0
 --- !u!1 &612035783116303343
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,9 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26bb9d906ef139499f22e3f3508617b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pourVolume: 0.33
+  pourVolume: 1
   pourForce: 2
-  myContainer: {fileID: 612035782720805330}
   Reciever: {fileID: 0}
 --- !u!198 &99086838
 ParticleSystem:

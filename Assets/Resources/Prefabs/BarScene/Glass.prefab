@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3879457628094823218}
   - component: {fileID: 3879457628094823219}
   m_Layer: 0
-  m_Name: Liquid
+  m_Name: Glass Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,9 +239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fill: 0
+  FillPercent: 0.85
   Dimensions: {x: 0, y: 0}
   Volume: 0
   myLiquid: {fileID: 11400000, guid: ed8e09100abe4224c841bdf91ed2a655, type: 2}
+  totalVolume: 0
 --- !u!1 &3879457628161960929
 GameObject:
   m_ObjectHideFlags: 0
