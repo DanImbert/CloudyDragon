@@ -22,12 +22,10 @@ public class LIquidContainer : MonoBehaviour
     }
     private void Start()
     {
-        if (myLiquid!=null)
-            ChangeLiquid(myLiquid);
+        InitContents();
     }
-   public void ChangeLiquid(LiquidSO nLiquid)
+   void ChangeColor(LiquidSO nLiquid)
     {
-        Debug.Log("Change liquid " + nLiquid.name); 
         myLiquid = nLiquid;
         mesh.material.SetColor("_Tint", myLiquid.BodyColor);
         mesh.material.SetColor("_RimColor", myLiquid.RimColor);
@@ -38,8 +36,23 @@ public class LIquidContainer : MonoBehaviour
         mesh.material.SetFloat("_Rim", 0);
         UpdateMaterial();
     }
+    public float totalVolume = 0;
+    float GetTotalVolume()
+    {
+        float v = 0;
+        foreach (KeyValuePair<LiquidSO, float> liquid in contents)
+        {
+            v += liquid.Value;
+        }
+        return v;
+    }
+    public float GetFillPercent()
+    {
+        return totalVolume / Volume;
+    }
     private void UpdateMaterial()
     {
+        Fill = GetFillPercent();
         if (Fill > 0)
         {
             mesh.enabled = true;
@@ -53,23 +66,86 @@ public class LIquidContainer : MonoBehaviour
             mesh.enabled = false;
         }
     }
-    public float SubstractVolume(float svolume)
+
+    #region contents
+    Dictionary<LiquidSO, float> contents;
+    public void InitContents()
     {
-        svolume *= 1/Volume;
-        if (Fill<svolume)
+        contents = new Dictionary<LiquidSO, float>();
+        if (myLiquid!=null)
         {
-            svolume = Fill;
+            AddLiquid(myLiquid, Volume * Fill) ;
         }
-        Fill -= svolume;
+        OnVolumeChange();
+    }
+    public void OnVolumeChange()
+    {
+        totalVolume = GetTotalVolume();
+        ChangeColor(myLiquid);
+    }
+    public bool SubstractVolume(float amount)
+    {
+        bool isEmpty = true;
+        Debug.Log("Substract " + amount + "drink from " + name + " total volume " + totalVolume);
+        float percent = amount / contents.Count;
+
+        Dictionary<LiquidSO,float> changes = new Dictionary<LiquidSO, float>();
+        foreach (KeyValuePair<LiquidSO, float> liquid in contents)
+        {
+            if (liquid.Value>0)
+            {
+                changes.Add(liquid.Key, liquid.Value * percent);
+                isEmpty = false;
+            }
+        }
+        foreach (KeyValuePair<LiquidSO, float> substract in changes)
+        {
+            SubstractLiquid(substract.Key, substract.Value);
+        }
+        OnVolumeChange();
+            return isEmpty;
+    }
+    public void  SubstractLiquid(LiquidSO liquid, float amount)
+    {
+        //Debug.Log("Substract " + amount + "drink from " + name + " total volume " + GetTotalVolume());
+        if (contents.ContainsKey(liquid) && contents[liquid] > 0)
+        {
+            contents[liquid] = Mathf.Max(0, contents[liquid] - amount);
+        }
+    }
+    public void AddLiquid(LiquidSO liquid, float amount)
+    {
+        amount = Mathf.Min(amount, Volume - totalVolume);
+        if (amount <= 0)
+            return;
+        if (contents.ContainsKey(liquid))
+            contents[liquid] += amount;
+        else
+            contents.Add(liquid, amount);
         UpdateMaterial();
-        return svolume;
     }
-    public void AddLiquid()
+    public void TransferLiquid(LIquidContainer cOther, float amount, bool substract)
     {
+        float percent = Mathf.Min(1,amount / totalVolume);
+        //Debug.Log("Transfer " + amount + " from " + name + " to " + cOther.name + " " + cOther.totalVolume);
 
+        Dictionary<LiquidSO, float> changes = new Dictionary<LiquidSO, float>();
+        foreach (KeyValuePair<LiquidSO, float> liquid in contents)
+        {
+            if (liquid.Value > 0)
+            {
+                cOther.AddLiquid(liquid.Key, liquid.Value * percent);
+                if (substract)
+                    changes.Add(liquid.Key, liquid.Value * percent);
+            }
+        }
+        foreach (KeyValuePair<LiquidSO, float> substracted in changes)
+        {
+            SubstractLiquid(substracted.Key, substracted.Value);
+        }
+        OnVolumeChange();
+        cOther.OnVolumeChange();
     }
-    public void TransferLiquid()
-    {
 
-    }
+    #endregion
 }

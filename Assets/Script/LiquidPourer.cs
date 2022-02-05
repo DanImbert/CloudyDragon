@@ -4,49 +4,63 @@ using UnityEngine;
 
 public class LiquidPourer : MonoBehaviour
 {
-    float lastEmit = 0;
-    float emitInterval = .3f;
+    float PourInterval = 0;
     public float pourVolume = 1f;
     public float pourForce = 1f;
-    public LIquidContainer myContainer;
+    LIquidContainer myContainer;
+    public LiquidReciever Reciever;
     ParticleSystem Particle;
 
     private void Awake()
     {
         //copyNode = LiquidEmitter.transform.GetChild(0);
         //liquidTrail = LiquidEmitter.GetComponent<TrailRenderer>();
+        myContainer = transform.parent.GetComponentInChildren<LIquidContainer>();
         Particle = GetComponent<ParticleSystem>();
+        PourInterval = 1f / Particle.emission.rateOverTime.constant;
+
         UpdateLiquid();
-       /* foreach (Transform node in LiquidEmitter.transform)
-        {
-            node.gameObject.SetActive(false);
-        }*/
+        /* foreach (Transform node in LiquidEmitter.transform)
+         {
+             node.gameObject.SetActive(false);
+         }*/
     }
-  /*  public Transform PoolNode()
+    /*  public Transform PoolNode()
+      {
+          foreach (Transform node in LiquidEmitter.transform)
+          {if (!node.gameObject.activeSelf)
+              {
+                  return node;
+              }
+          }
+          GameObject nNode = GameObject.Instantiate(copyNode.gameObject);
+          nNode.transform.SetParent(LiquidEmitter.transform);
+          return nNode.transform;
+      }*/
+    private void OnEnable()
     {
-        foreach (Transform node in LiquidEmitter.transform)
-        {if (!node.gameObject.activeSelf)
-            {
-                return node;
-            }
+        if (LiquidReciever.main!=null)
+        {
+            Particle.collision.AddPlane(LiquidReciever.main.transform);
         }
-        GameObject nNode = GameObject.Instantiate(copyNode.gameObject);
-        nNode.transform.SetParent(LiquidEmitter.transform);
-        return nNode.transform;
-    }*/
+    }
     void FixedUpdate()
     {
         PourLiquid();
     }
     public void PourLiquid()
     {
-        //liquidTrail.emitting = false;
-        if (transform.up.y < 0)
+        if (PourCoroutine == null)
         {
-            float PourVolume = myContainer.SubstractVolume(pourVolume * Time.deltaTime);
-           // liquidTrail.emitting = true;
-            if (!Particle.isPlaying)
-           Particle.Play();
+            PourCoroutine = StartCoroutine(PourLiquidCoroutine());
+        }
+    }
+    Coroutine PourCoroutine;
+    public IEnumerator PourLiquidCoroutine()
+    {
+        StartPouring();
+        while (transform.up.y < 0 && myContainer.totalVolume > 0)
+        {
             /*if (PourVolume > 0 && lastEmit<Time.time)
             {
                 lastEmit = Time.time + emitInterval;
@@ -56,17 +70,29 @@ public class LiquidPourer : MonoBehaviour
                 waterDrain.GetComponent<Rigidbody>().velocity = transform.up * pourForce;
                 waterDrain.transform.SetAsLastSibling();
             }*/
-        }else
-        {
 
-            Particle.Stop();
+            yield return new WaitForSeconds(PourInterval);
         }
+        StopPouring();
+    }
+
+    public void StartPouring()
+    {
+        // liquidTrail.emitting = true;
+        if (!Particle.isPlaying)
+            Particle.Play();
+    }
+    public void StopPouring()
+    {
+        //liquidTrail.emitting = false;
+        Particle.Stop();
+        PourCoroutine = null;
     }
     public void UpdateLiquid()
     {
         ParticleSystem.TrailModule pSys = Particle.trails;
         pSys.colorOverTrail = new ParticleSystem.MinMaxGradient(myContainer.myLiquid.RimColor, myContainer.myLiquid.BodyColor);
-    }
+    }/*
     private void Update()
     {
 //UpdateTrail();
@@ -94,6 +120,10 @@ public class LiquidPourer : MonoBehaviour
                 }
             }
             liquidTrail.SetPositions(positions.ToArray());
+        }
         }*/
+    public void TransferLiquid(LIquidContainer otherC)
+    {
+        myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);
     }
 }

@@ -29,4 +29,8 @@ public class GameController : MonoBehaviour
         ShelfView.gameObject.SetActive(!bar);
         ShelfViewMenu.gameObject.SetActive(!bar);
     }
+    public void EndTheGame()
+    {
+
+    }
 }

@@ -2554,6 +2554,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 612035782720805324, guid: 9cc401dcfa33dca4099ff0f1a42a25a2, type: 3}
+      propertyPath: m_Name
+      value: Bottle Contents
+      objectReference: {fileID: 0}
+    - target: {fileID: 612035782720805330, guid: 9cc401dcfa33dca4099ff0f1a42a25a2, type: 3}
+      propertyPath: Fill
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 612035783116303348, guid: 9cc401dcfa33dca4099ff0f1a42a25a2, type: 3}
+      propertyPath: pourVolume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc401dcfa33dca4099ff0f1a42a25a2, type: 3}
 --- !u!1001 &3879457629002401705
@@ -2563,6 +2575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1722820509}
     m_Modifications:
+    - target: {fileID: 3879457628094823217, guid: 5f8c9a6de16811349809066e7e005b6a, type: 3}
+      propertyPath: m_Name
+      value: Glass Contents
+      objectReference: {fileID: 0}
     - target: {fileID: 3879457628161960929, guid: 5f8c9a6de16811349809066e7e005b6a, type: 3}
       propertyPath: m_Name
       value: Glass

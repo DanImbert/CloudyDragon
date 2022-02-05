@@ -24,4 +24,8 @@ public class BarViewController : MonoBehaviour
         }
         animator.SetBool("Pouring", pouring);
     }
+    private void OnDisable()
+    {
+        animator.SetBool("Pouring", false);
+    }
 }
