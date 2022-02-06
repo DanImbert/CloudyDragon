@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glass
+  m_Name: White Glass
   m_Shader: {fileID: 4800000, guid: 8f50ff0900303b443b34c579a12f99f8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -99,12 +99,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.6477991, b: 0.9716981, a: 0.16470589}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.09803922}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 0.051886797, b: 0.051886797, a: 1}
     - _RimColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
     - _RimColor2: {r: 0.5496618, g: 0.6037736, b: 0.56754225, a: 0.2}
-    - _SColor: {r: 0.5943396, g: 0.5242524, b: 0.5242524, a: 0.047058824}
+    - _SColor: {r: 0.5990566, g: 0.88511854, b: 1, a: 0.047058824}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _TopColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
