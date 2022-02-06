@@ -21,6 +21,7 @@ public class SelectableBottle : MonoBehaviour
             lc.AddLiquid(mainLiquid, lc.Volume * lc.Fill);
         }
         lc.OnVolumeChange(true);
+        SetDisplayMode();
     }
     public void MoveToPosition(Vector3 pos)
     {
@@ -33,5 +34,13 @@ public class SelectableBottle : MonoBehaviour
             LeanTween.move(gameObject, startPos, .5f);
             LeanTween.rotate(gameObject, startRot.eulerAngles, .5f);
         }
+    }
+    public void SetDisplayMode()
+    {
+        GetComponentInChildren<LiquidPourer>().enabled = false;
+    }
+    public void SetPourMode()
+    {
+        GetComponentInChildren<LiquidPourer>().enabled = true;
     }
 }

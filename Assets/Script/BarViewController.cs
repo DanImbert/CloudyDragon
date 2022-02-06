@@ -53,11 +53,16 @@ public class BarViewController : MonoBehaviour
         LeanTween.cancel(myDrink.gameObject);
         LeanTween.moveLocal(myDrink.gameObject, Vector3.zero + myDrink.BottleHeight * Vector3.down, 1);
         LeanTween.rotateLocal(myDrink.gameObject, Vector3.zero, 1);
+
+        myDrink.SetPourMode();
     }
     public void ClearDrink()
     {
-        if (myDrink!=null)
+        if (myDrink != null)
+        {
             ShelfViewController.main.ReturnBottle(myDrink);
+            myDrink.SetDisplayMode();
+        }
         myDrink = null;
     }
 }

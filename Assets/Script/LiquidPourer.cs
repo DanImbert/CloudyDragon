@@ -84,6 +84,8 @@ public class LiquidPourer : MonoBehaviour
     }
     public void StopPouring()
     {
+        if (PourCoroutine != null)
+            StopCoroutine(PourCoroutine);
         //liquidTrail.emitting = false;
         Particle.Stop();
         PourCoroutine = null;
@@ -125,5 +127,9 @@ public class LiquidPourer : MonoBehaviour
     public void TransferLiquid(LIquidContainer otherC)
     {
         myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);
+    }
+    private void OnDisable()
+    {
+        StopPouring();
     }
 }

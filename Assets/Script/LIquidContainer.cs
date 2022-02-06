@@ -9,10 +9,11 @@ public class LIquidContainer : MonoBehaviour
     [Range(0, 1)] public float Fill = .5f;
 
     public float BottleWidth = 0;
-    public float BottleMiny = 0;
-    public float BottleMaxy = 0;
+    public float BottleEmptyX = 0;
+    public float BottleFullX = 0;
+    public float BottleEmptyY = 0;
+    public float BottleFullY = 0;
 
-    public Vector2 Dimensions;
     public float Volume = 0;
 
     private void Awake()
@@ -26,6 +27,7 @@ public class LIquidContainer : MonoBehaviour
     private void Update()
     {
         UpdateFoam();
+        ChangeVolume();
     }
     public Color BodyColor = Color.black;
     public Color RimColor = Color.black;
@@ -91,10 +93,9 @@ public class LIquidContainer : MonoBehaviour
         if (Fill > 0)
         {
             mesh.enabled = true;
-            //float fill = Mathf.Abs(transform.up.y);
-            //fill = Mathf.Abs(fill * Dimensions.y + (1 - fill) * Dimensions.x);
-            //fill *= (-.5f + (1 - Fill * FillPercent) * 2);
-            float fill = BottleMaxy - (BottleMaxy + BottleMiny) * Fill;
+            float fill = Mathf.Abs(transform.up.y);
+            
+                fill = (BottleEmptyY + (BottleFullY - BottleEmptyY) * Fill) * fill + (BottleEmptyX + (BottleFullX - BottleEmptyX) * Fill) * (1-fill);
             mesh.material.SetFloat("_FillAmount", fill);
         }
         else
