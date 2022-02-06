@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e0bc5db370d5d0419b350f2a16ccb2e, type: 3}
-  m_Name: Soda
+  m_Name: White Rum
   m_EditorClassIdentifier: 
-  BodyColor: {r: 0.947864, g: 0.9707343, b: 0.9716981, a: 1}
-  RimColor: {r: 0.641812, g: 0.9528302, b: 0.919086, a: 1}
+  BodyColor: {r: 1, g: 1, b: 1, a: 1}
+  RimColor: {r: 0.3726415, g: 0.7984499, b: 1, a: 1}
   RimStrength: 3.3
-  FoamColor: {r: 0.9528302, g: 0.9276912, b: 0.91148096, a: 0}
-  Foaming: 1
+  FoamColor: {r: 0.5838377, g: 0.6037736, b: 0.5847335, a: 1}
+  Foaming: 0
   DeFoaming: 0.3

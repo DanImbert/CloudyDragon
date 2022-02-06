@@ -12,7 +12,15 @@ public class SelectableBottle : MonoBehaviour
     {
         startPos = transform.position;
         startRot = transform.rotation;
-        mainLiquid = GetComponentInChildren<LIquidContainer>().myLiquid;
+    }
+    private void Start()
+    {
+    LIquidContainer lc = GetComponentInChildren<LIquidContainer>();
+        if (mainLiquid != null)
+        {
+            lc.AddLiquid(mainLiquid, lc.Volume * lc.Fill);
+        }
+        lc.OnVolumeChange(true);
     }
     public void MoveToPosition(Vector3 pos)
     {

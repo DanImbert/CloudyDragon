@@ -43,7 +43,7 @@ public class ShelfViewController : MonoBehaviour
                 {
                     if (touch.phase == TouchPhase.Began)
                     {
-                        OnBottleConfirmed();
+                        ClearSelection();
                     }
                 }
             }

@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eaa35ebbc2a1114e91fd59d80442457, type: 3}
-  m_Name: Whisky Soda
+  m_Name: Cosmopolitan
   m_EditorClassIdentifier: 
   Requirements:
-  - Spirit: {fileID: 11400000, guid: a56da6c90c462c242a45dd044a6ba4fb, type: 2}
-    Percentage: 0.33
-  - Spirit: {fileID: 11400000, guid: 7411439843df16e42b8ea58638511967, type: 2}
-    Percentage: 0.66
+  - Spirit: {fileID: 11400000, guid: f25ba04504f63c64aaa8658dbc722da4, type: 2}
+    Percentage: 0.45
+  - Spirit: {fileID: 11400000, guid: a8881b5efa97c2546b36a07e31054e94, type: 2}
+    Percentage: 0.15
+  - Spirit: {fileID: 11400000, guid: 90dafc49e5a132245958f86a5bd1e85c, type: 2}
+    Percentage: 0.3

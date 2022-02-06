@@ -6,10 +6,12 @@ public class LiquidReciever : MonoBehaviour
 {
     public static LiquidReciever main;
     LIquidContainer myContainer;
+    LiquidWobble myWobbler;
     private void Awake()
     {
         main = this;
         myContainer = transform.parent.GetComponentInChildren<LIquidContainer>();
+        myWobbler = transform.parent.GetComponentInChildren<LiquidWobble>();
     }
     private void OnParticleCollision(GameObject other)
     {
@@ -17,6 +19,7 @@ public class LiquidReciever : MonoBehaviour
         {
             pourer.TransferLiquid(myContainer);
             ReadjustHeight();
+            myWobbler.MakeRipple(.03f);
             if (myContainer.GetFillPercent() >= 1)
                 GameController.main.EndTheGame(myContainer);
         }

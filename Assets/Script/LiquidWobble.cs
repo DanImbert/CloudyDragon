@@ -53,7 +53,11 @@ public class LiquidWobble : MonoBehaviour
         lastPos = transform.position;
         lastRot = transform.rotation.eulerAngles;
     }
-
+    public void MakeRipple(float str)
+    {
+        wobbleAmountToAddX += str * Mathf.Sign(wobbleAmountX);
+        wobbleAmountToAddZ += str * Mathf.Sign(wobbleAmountZ);
+    }
 
 
 }

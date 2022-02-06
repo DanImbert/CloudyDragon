@@ -78,6 +78,7 @@ public class LiquidPourer : MonoBehaviour
     public void StartPouring()
     {
         // liquidTrail.emitting = true;
+        UpdateLiquid();
         if (!Particle.isPlaying)
             Particle.Play();
     }
@@ -90,7 +91,7 @@ public class LiquidPourer : MonoBehaviour
     public void UpdateLiquid()
     {
         ParticleSystem.TrailModule pSys = Particle.trails;
-        pSys.colorOverTrail = new ParticleSystem.MinMaxGradient(myContainer.myLiquid.RimColor, myContainer.myLiquid.BodyColor);
+        pSys.colorOverTrail = new ParticleSystem.MinMaxGradient(myContainer.RimColor, myContainer.BodyColor);
     }/*
     private void Update()
     {

@@ -14,7 +14,6 @@ public class LIquidContainer : MonoBehaviour
 
     public Vector2 Dimensions;
     public float Volume = 0;
-    public LiquidSO myLiquid;
 
     private void Awake()
     {
@@ -23,19 +22,17 @@ public class LIquidContainer : MonoBehaviour
         mesh.material = mat;
         Volume = transform.lossyScale.x * transform.lossyScale.x * Mathf.PI * transform.lossyScale.y;
     }
-    private void Start()
-    {
-        InitContents();
-    }
     private void Update()
     {
         UpdateFoam();
     }
+    public Color BodyColor = Color.black;
+    public Color RimColor = Color.black;
     void ChangeColor()
     {
 
-        Color BodyColor = Color.black;
-        Color RimColor = Color.black;
+         BodyColor = Color.black;
+         RimColor = Color.black;
         Color FoamColor = Color.black ;
 
         float RimStrength = 0;
@@ -106,16 +103,7 @@ public class LIquidContainer : MonoBehaviour
     }
 
     #region Contents
-    Dictionary<LiquidSO, float> contents;
-    public void InitContents()
-    {
-        contents = new Dictionary<LiquidSO, float>();
-        if (myLiquid!=null)
-        {
-            AddLiquid(myLiquid, Volume * Fill) ;
-        }
-        OnVolumeChange(true);
-    }
+    Dictionary<LiquidSO, float> contents = new Dictionary<LiquidSO, float>();
     public void OnVolumeChange(bool color)
     {
         totalVolume = GetTotalVolume();
