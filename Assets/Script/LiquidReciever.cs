@@ -5,7 +5,7 @@ using UnityEngine;
 public class LiquidReciever : MonoBehaviour
 {
     public static LiquidReciever main;
-    LIquidContainer myContainer;
+    public LIquidContainer myContainer;
     LiquidWobble myWobbler;
     private void Awake()
     {
@@ -17,11 +17,8 @@ public class LiquidReciever : MonoBehaviour
     {
         if (other.TryGetComponent<LiquidPourer>(out LiquidPourer pourer))
         {
-            pourer.TransferLiquid(myContainer);
             ReadjustHeight();
             myWobbler.MakeRipple(.03f);
-            if (myContainer.GetFillPercent() >= 1)
-                GameController.main.EndTheGame(myContainer);
         }
     }
     public void ReadjustHeight()

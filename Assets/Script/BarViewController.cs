@@ -51,7 +51,7 @@ public class BarViewController : MonoBehaviour
         myDrink.transform.rotation = oRot;
 
         LeanTween.cancel(myDrink.gameObject);
-        LeanTween.moveLocal(myDrink.gameObject, Vector3.zero + myDrink.BottleHeight * Vector3.down, 1);
+        LeanTween.moveLocal(myDrink.gameObject, Vector3.zero + myDrink.BottleHeight * Vector3.down * .5f, 1);
         LeanTween.rotateLocal(myDrink.gameObject, Vector3.zero, 1);
 
         myDrink.SetPourMode();

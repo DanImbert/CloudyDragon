@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365407461139156361}
   m_LocalRotation: {x: -0.000000028786829, y: 0.2588191, z: 0.0000000077134095, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 0.603, z: 0}
+  m_LocalPosition: {x: 0, y: 0.471, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26bb9d906ef139499f22e3f3508617b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pourVolume: 0.2
+  pourVolume: 0.05
   pourForce: 2
 --- !u!198 &2855253796867107788
 ParticleSystem:
@@ -131,7 +131,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3640,7 +3640,7 @@ ParticleSystem:
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.75
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3746,7 +3746,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.9
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5022,7 +5022,7 @@ Transform:
   m_GameObject: {fileID: 4689521054424837881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -22.66, y: -5.28, z: 8.82}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7756313443276800776}
@@ -5060,6 +5060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BottleHeight: 1.68
   mainLiquid: {fileID: 0}
+  cork: {fileID: 0}
 --- !u!1 &5505410092167245828
 GameObject:
   m_ObjectHideFlags: 0

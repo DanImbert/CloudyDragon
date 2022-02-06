@@ -39,9 +39,13 @@ public class SelectableBottle : MonoBehaviour
     public void SetDisplayMode()
     {
         GetComponentInChildren<LiquidPourer>().enabled = false;
+        if (cork != null)
+            cork.SetActive(true);
     }
     public void SetPourMode()
     {
         GetComponentInChildren<LiquidPourer>().enabled = true;
+        if (cork != null)
+            cork.SetActive(false);
     }
 }

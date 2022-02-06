@@ -69,7 +69,7 @@ public class LiquidPourer : MonoBehaviour
                 waterDrain.GetComponent<Rigidbody>().velocity = transform.up * pourForce;
                 waterDrain.transform.SetAsLastSibling();
             }*/
-
+            StartCoroutine();
             yield return new WaitForSeconds(PourInterval);
         }
         StopPouring();
@@ -126,7 +126,11 @@ public class LiquidPourer : MonoBehaviour
         }*/
     public void TransferLiquid(LIquidContainer otherC)
     {
+        yield return new WaitForSeconds(.3f);
+
         myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);
+        if (otherC.GetFillPercent() >= 1)
+            GameController.main.EndTheGame(otherC);
     }
     private void OnDisable()
     {
