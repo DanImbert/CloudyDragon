@@ -5060,7 +5060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BottleHeight: 1.68
   mainLiquid: {fileID: 0}
-  cork: {fileID: 0}
+  cork: {fileID: 3984015555196858202}
 --- !u!1 &5505410092167245828
 GameObject:
   m_ObjectHideFlags: 0

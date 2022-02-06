@@ -69,7 +69,7 @@ public class LiquidPourer : MonoBehaviour
                 waterDrain.GetComponent<Rigidbody>().velocity = transform.up * pourForce;
                 waterDrain.transform.SetAsLastSibling();
             }*/
-            StartCoroutine();
+            StartCoroutine(TransferLiquid(LiquidReciever.main.Container));
             yield return new WaitForSeconds(PourInterval);
         }
         StopPouring();
@@ -124,7 +124,7 @@ public class LiquidPourer : MonoBehaviour
             liquidTrail.SetPositions(positions.ToArray());
         }
         }*/
-    public void TransferLiquid(LIquidContainer otherC)
+    public IEnumerator TransferLiquid(LIquidContainer otherC)
     {
         yield return new WaitForSeconds(.3f);
 
