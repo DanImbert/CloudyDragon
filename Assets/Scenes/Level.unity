@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4440227, g: 0.49316716, b: 0.57223225, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465781, g: 0.49641472, b: 0.5748179, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -808,6 +808,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Recipe View
       objectReference: {fileID: 0}
+    - target: {fileID: 1138217580299629659, guid: 4d94b67dd1e6af34aba1375ddaf358a1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 04a5be1d11f650c46b6268f279cf44b0, type: 2}
+    - target: {fileID: 1138217580299629659, guid: 4d94b67dd1e6af34aba1375ddaf358a1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 654649505758178564, guid: 04a5be1d11f650c46b6268f279cf44b0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d94b67dd1e6af34aba1375ddaf358a1, type: 3}
 --- !u!1001 &1901569442879773974
