@@ -16,8 +16,13 @@ public class LiquidReciever : MonoBehaviour
         if (other.TryGetComponent<LiquidPourer>(out LiquidPourer pourer))
         {
             pourer.TransferLiquid(myContainer);
+            ReadjustHeight();
             if (myContainer.GetFillPercent() >= 1)
                 GameController.main.EndTheGame(myContainer);
         }
+    }
+    public void ReadjustHeight()
+    {
+        transform.localPosition = new Vector3(transform.localPosition.x, myContainer.Fill * 2 - 1, transform.localPosition.z);
     }
 }

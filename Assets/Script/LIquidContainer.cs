@@ -7,7 +7,11 @@ public class LIquidContainer : MonoBehaviour
     Material mat;
     MeshRenderer mesh;
     [Range(0, 1)] public float Fill = .5f;
-    [Range(0, 1)] public float FillPercent = 1;
+
+    public float BottleWidth = 0;
+    public float BottleMiny = 0;
+    public float BottleMaxy = 0;
+
     public Vector2 Dimensions;
     public float Volume = 0;
     public LiquidSO myLiquid;
@@ -17,9 +21,7 @@ public class LIquidContainer : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
         mat = Material.Instantiate(mesh.material);
         mesh.material = mat;
-        Dimensions = new Vector2(transform.lossyScale.y, transform.lossyScale.x)+Vector2.one*.01f;
-        Volume =  Dimensions.x * Dimensions.x * Mathf.PI * Dimensions.y;
-        Dimensions.x*=0.33f;
+        Volume = transform.lossyScale.x * transform.lossyScale.x * Mathf.PI * transform.lossyScale.y;
     }
     private void Start()
     {
@@ -70,7 +72,7 @@ public class LIquidContainer : MonoBehaviour
 
         mesh.material.SetColor("_TopColor", RimColor);
         mesh.material.SetColor("_FoamColor", FoamColor);
-        UpdateMaterial();
+        ChangeVolume();
     }
     public float totalVolume = 0;
     float GetTotalVolume()
@@ -86,15 +88,15 @@ public class LIquidContainer : MonoBehaviour
     {
         return totalVolume / Volume;
     }
-    private void UpdateMaterial()
+    private void ChangeVolume()
     {
-        Fill = GetFillPercent();
         if (Fill > 0)
         {
             mesh.enabled = true;
-            float fill = Mathf.Abs(transform.up.y);
-            fill = Mathf.Abs(fill * Dimensions.y + (1 - fill) * Dimensions.x);
-            fill *= (-.5f + (1 - Fill * FillPercent) * 2);
+            //float fill = Mathf.Abs(transform.up.y);
+            //fill = Mathf.Abs(fill * Dimensions.y + (1 - fill) * Dimensions.x);
+            //fill *= (-.5f + (1 - Fill * FillPercent) * 2);
+            float fill = BottleMaxy - (BottleMaxy + BottleMiny) * Fill;
             mesh.material.SetFloat("_FillAmount", fill);
         }
         else
@@ -103,7 +105,7 @@ public class LIquidContainer : MonoBehaviour
         }
     }
 
-    #region contents
+    #region Contents
     Dictionary<LiquidSO, float> contents;
     public void InitContents()
     {
@@ -117,8 +119,11 @@ public class LIquidContainer : MonoBehaviour
     public void OnVolumeChange(bool color)
     {
         totalVolume = GetTotalVolume();
+        Fill = GetFillPercent();
         if (color)
-         ChangeColor();
+            ChangeColor();
+        else
+            ChangeVolume();
     }
     public bool SubstractVolume(float amount)
     {
@@ -159,7 +164,6 @@ public class LIquidContainer : MonoBehaviour
             contents[liquid] += amount;
         else
             contents.Add(liquid, amount);
-        UpdateMaterial();
     }
     public void TransferLiquid(LIquidContainer cOther, float amount, bool substract)
     {
@@ -181,6 +185,7 @@ public class LIquidContainer : MonoBehaviour
             SubstractLiquid(substracted.Key, substracted.Value);
         }
         OnVolumeChange(false);
+        cOther.IncreaseFoam(.1f);
         cOther.OnVolumeChange(true);
     }
     public float GetVolumeContent(LiquidSO liquid)
@@ -198,15 +203,21 @@ public class LIquidContainer : MonoBehaviour
     #region Foam
     float foaming = 0;
     float foamStrength = 0f;
-    public void IncreaseFoam()
+    public void IncreaseFoam(float value)
     {
-
+        foaming += foaming * value * foamStrength;
     }
     public void UpdateFoam()
     {
-
+        if (foaming>0)
+            foaming = Mathf.Max(0, foaming-1f * Time.deltaTime);
         mesh.material.SetFloat("_Rim", foaming);
     }
 
     #endregion
+    /*private void OnValidate()
+    {
+        mesh = GetComponent<MeshRenderer>();
+        ChangeVolume();
+    }*/
 }

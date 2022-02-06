@@ -162,7 +162,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3879457628094823217}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -239,7 +239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fill: 0
-  FillPercent: 0.85
+  BottleWidth: 0
+  BottleMiny: -0.15
+  BottleMaxy: 1.1
   Dimensions: {x: 0, y: 0}
   Volume: 0
   myLiquid: {fileID: 11400000, guid: ed8e09100abe4224c841bdf91ed2a655, type: 2}
@@ -255,7 +257,6 @@ GameObject:
   - component: {fileID: 3879457628161960933}
   - component: {fileID: 3879457628161960930}
   - component: {fileID: 3879457628161960931}
-  - component: {fileID: 3879457628161960928}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -330,17 +331,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3879457628161960928
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879457628161960929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

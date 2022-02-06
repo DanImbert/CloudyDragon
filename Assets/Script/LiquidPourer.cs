@@ -8,7 +8,6 @@ public class LiquidPourer : MonoBehaviour
     public float pourVolume = 1f;
     public float pourForce = 1f;
     LIquidContainer myContainer;
-    public LiquidReciever Reciever;
     ParticleSystem Particle;
 
     private void Awake()
