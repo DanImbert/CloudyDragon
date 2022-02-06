@@ -41,7 +41,7 @@ public class ShelfViewController : MonoBehaviour
             {
                 foreach (Touch touch in Input.touches)
                 {
-                    if (touch.phase == TouchPhase.Began)
+                    if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject(touch.fingerId) && touch.phase == TouchPhase.Began)
                     {
                         ClearSelection();
                     }
@@ -64,8 +64,11 @@ public class ShelfViewController : MonoBehaviour
     }
     public void OnBottleConfirmed()
     {
-        BarViewController.main.ChangeDrink(SelectedBottle);
-        GameController.main.GoToBarView();
+        if (SelectedBottle != null)
+        {
+            BarViewController.main.ChangeDrink(SelectedBottle);
+            GameController.main.GoToBarView();
+        }
     }
     public void ReturnBottle(SelectableBottle bottle)
     {

@@ -123,9 +123,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &84831954 stripped
+--- !u!4 &12634931 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5268874489064037830, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8991532615461832493, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
   m_PrefabInstance: {fileID: 8991532614946988208}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &100683138
@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 2855253796867107788, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 84831954}
+      objectReference: {fileID: 0}
     - target: {fileID: 4689521054424837881, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Name
       value: Trisec Bottle (1)
@@ -301,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 2855253796867107788, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 84831954}
+      objectReference: {fileID: 0}
     - target: {fileID: 4689521054424837881, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Name
       value: Lime Juice
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 2855253796867107788, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 84831954}
+      objectReference: {fileID: 0}
     - target: {fileID: 4689521054424837881, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Name
       value: White Rum
@@ -765,6 +765,63 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 4b5209adca9a7be43bfb3797e689abab, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+--- !u!1001 &2101876046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 12634931}
+    m_Modifications:
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650443768412, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_Name
+      value: Whiskey Glass
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
 --- !u!1001 &1138217579755160073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -920,11 +977,11 @@ PrefabInstance:
     - target: {fileID: 4466547623364145181, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 84831954}
+      objectReference: {fileID: 0}
     - target: {fileID: 4466547623703126246, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 84831954}
+      objectReference: {fileID: 0}
     - target: {fileID: 4569272707474127039, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: mainLiquid
       value: 
@@ -936,7 +993,7 @@ PrefabInstance:
     - target: {fileID: 8082186968982418219, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 84831954}
+      objectReference: {fileID: 0}
     - target: {fileID: 8267691981445086089, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: mainLiquid
       value: 
@@ -1345,9 +1402,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8991532616123075832, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8991532616123075833, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991532616123075836, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 616682617, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}

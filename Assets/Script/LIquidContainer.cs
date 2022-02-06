@@ -21,6 +21,7 @@ public class LIquidContainer : MonoBehaviour
         mat = Material.Instantiate(mesh.material);
         mesh.material = mat;
         Volume = transform.lossyScale.x * transform.lossyScale.x * Mathf.PI * transform.lossyScale.y;
+        ChangeVolume();
     }
     private void Update()
     {
