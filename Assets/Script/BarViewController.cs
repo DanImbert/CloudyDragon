@@ -24,7 +24,7 @@ public class BarViewController : MonoBehaviour
             Debug.Log(GameController.main.state);
             if (GameController.main.state == GameController.GameState.shaker)
             {
-                shaking = true;
+                shaking = Input.touches.Length>0;
             }
             else if (myDrink == null || !LeanTween.isTweening(myDrink.gameObject))
             {

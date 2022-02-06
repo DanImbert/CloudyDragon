@@ -32,8 +32,8 @@ public class SelectableBottle : MonoBehaviour
     {
         if (!LeanTween.isTweening(gameObject))
         {
-            LeanTween.move(gameObject, startPos, .5f);
-            LeanTween.rotate(gameObject, startRot.eulerAngles, .5f);
+            LeanTween.move(gameObject, startPos, 1);
+            LeanTween.rotate(gameObject, startRot.eulerAngles, 1);
         }
     }
     public void SetDisplayMode()

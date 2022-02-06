@@ -754,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2393450412791775676, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2393450412791775676, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 1115111896}
     - target: {fileID: 2393450412791775676, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndTheGame
+      value: GoToNextPhase
       objectReference: {fileID: 0}
     - target: {fileID: 2393450412791775676, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2393450412791775676, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: LIquidContainer, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4446648501968158630, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
       propertyPath: m_Pivot.x
@@ -861,6 +861,10 @@ PrefabInstance:
       value: 'SWIPE TO SHAKE
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971200871242595084, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2698b12df9e140b4c836319e8a1b2e93, type: 3}
