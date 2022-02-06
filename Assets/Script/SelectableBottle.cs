@@ -16,7 +16,7 @@ public class SelectableBottle : MonoBehaviour
     }
     private void Start()
     {
-    LIquidContainer lc = GetComponentInChildren<LIquidContainer>();
+    LiquidContainer lc = GetComponentInChildren<LiquidContainer>();
         if (mainLiquid != null)
         {
             lc.AddLiquid(mainLiquid, lc.Volume * lc.Fill);
@@ -26,6 +26,7 @@ public class SelectableBottle : MonoBehaviour
     }
     public void MoveToPosition(Vector3 pos)
     {
+        LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, pos, .25f);
     }
     public void ResetPosition()

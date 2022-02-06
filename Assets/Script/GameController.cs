@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
         state = view;
         BarViewMenu.gameObject.SetActive(view == GameState.bar);
         BarView.gameObject.SetActive(view == GameState.bar || view == GameState.shaker);
+        BarViewController.main.shaker.SetTransparent(view == GameState.bar);
         ShelfView.gameObject.SetActive(view == GameState.shelf);
         ShelfViewMenu.gameObject.SetActive(view == GameState.shelf);
         ShelfViewMenu.gameObject.SetActive(view == GameState.shelf);
@@ -58,7 +59,6 @@ public class GameController : MonoBehaviour
             case GameState.endgame:
             case GameState.shaker:
                 CameraController.main.MoveToPosition(BarView.transform);
-                BarViewController.main.shaker.SetTransparent(view == GameState.bar);
                 break;
         }
     }

@@ -7,14 +7,14 @@ public class LiquidPourer : MonoBehaviour
     float PourInterval = 0;
     public float pourVolume = 1f;
     public float pourForce = 1f;
-    LIquidContainer myContainer;
+    LiquidContainer myContainer;
     ParticleSystem Particle;
-
+    public LiquidReciever targetReciever;
     private void Awake()
     {
         //copyNode = LiquidEmitter.transform.GetChild(0);
         //liquidTrail = LiquidEmitter.GetComponent<TrailRenderer>();
-        myContainer = transform.parent.GetComponentInChildren<LIquidContainer>();
+        myContainer = transform.parent.GetComponentInChildren<LiquidContainer>();
         Particle = GetComponent<ParticleSystem>();
         PourInterval = 1f / Particle.emission.rateOverTime.constant;
 
@@ -38,7 +38,11 @@ public class LiquidPourer : MonoBehaviour
       }*/
     private void OnEnable()
     {
-        if (LiquidReciever.main!=null)
+        if ( targetReciever!=null )
+        {
+            Particle.collision.AddPlane(targetReciever.transform);
+        }
+        else if (LiquidReciever.main!=null)
         {
             Particle.collision.AddPlane(LiquidReciever.main.transform);
         }
@@ -69,7 +73,7 @@ public class LiquidPourer : MonoBehaviour
                 waterDrain.GetComponent<Rigidbody>().velocity = transform.up * pourForce;
                 waterDrain.transform.SetAsLastSibling();
             }*/
-            StartCoroutine(TransferLiquid(LiquidReciever.main.Container));
+            StartCoroutine(TransferLiquid(targetReciever != null ? targetReciever.Container : LiquidReciever.main.Container));
             yield return new WaitForSeconds(PourInterval);
         }
         StopPouring();
@@ -124,10 +128,9 @@ public class LiquidPourer : MonoBehaviour
             liquidTrail.SetPositions(positions.ToArray());
         }
         }*/
-    public IEnumerator TransferLiquid(LIquidContainer otherC)
+    public IEnumerator TransferLiquid(LiquidContainer otherC)
     {
         yield return new WaitForSeconds(.3f);
-
         myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);
         if (otherC.GetFillPercent() >= 1 && GameController.main.state < GameController.GameState.shaker)
             GameController.main.GoToNextPhase();

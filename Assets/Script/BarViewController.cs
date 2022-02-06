@@ -21,7 +21,6 @@ public class BarViewController : MonoBehaviour
         bool shaking = false;
         if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log(GameController.main.state);
             if (GameController.main.state == GameController.GameState.shaker)
             {
                 shaking = Input.touches.Length>0;
