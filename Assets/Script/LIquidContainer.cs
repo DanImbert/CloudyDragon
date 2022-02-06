@@ -14,14 +14,14 @@ public class LIquidContainer : MonoBehaviour
     public float BottleEmptyY = 0;
     public float BottleFullY = 0;
 
-    public float Volume = 0;
+    public float Volume = 10;
 
     private void Awake()
     {
         mesh = GetComponent<MeshRenderer>();
         mat = Material.Instantiate(mesh.material);
         mesh.material = mat;
-        Volume = transform.lossyScale.x * transform.lossyScale.x * Mathf.PI * transform.lossyScale.y;
+        //Volume = transform.lossyScale.x * transform.lossyScale.x * Mathf.PI * transform.lossyScale.y;
         ChangeVolume();
     }
     private void Update()

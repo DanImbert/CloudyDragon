@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class ShakerController : MonoBehaviour
 {
-    Animator animator;
     public GameObject Lid;
     public GameObject OpaqueBody;
     public GameObject TransparentBody;
 
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
 
-    public void SetTransparent(bool t)
+    public void SetTransparent(bool value)
     {
-        OpaqueBody.SetActive(!t);
-        Lid.SetActive(!t);
-        TransparentBody.SetActive(t);
+        OpaqueBody.SetActive(!value);
+        Lid.SetActive(!value);
+        TransparentBody.SetActive(value);
     }
 }

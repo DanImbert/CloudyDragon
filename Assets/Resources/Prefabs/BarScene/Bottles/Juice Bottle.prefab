@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 1215230190209833024, guid: 7e6b9d3fae28963428fbc89f2e43e0d5, type: 3}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleHeight
-      value: 1.96
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 3734376116173884756, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Mesh

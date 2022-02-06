@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26bb9d906ef139499f22e3f3508617b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pourVolume: 0.05
+  pourVolume: 0.33
   pourForce: 2
 --- !u!198 &2855253796867107788
 ParticleSystem:
@@ -5058,7 +5058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac774ab1e936e904e94ee59799e2d13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BottleHeight: 2
+  BottleHeight: 3
   mainLiquid: {fileID: 0}
   cork: {fileID: 3984015555196858202}
 --- !u!1 &5505410092167245828
@@ -5179,7 +5179,7 @@ MonoBehaviour:
   BottleFullX: 0.18
   BottleEmptyY: 0.5
   BottleFullY: -1.22
-  Volume: 0
+  Volume: 10
   BodyColor: {r: 0, g: 0, b: 0, a: 0}
   RimColor: {r: 1, g: 1, b: 1, a: 0}
   totalVolume: 0

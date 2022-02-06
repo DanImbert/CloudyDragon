@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b3e823dd42ae94ba58fa0934299d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Container: {fileID: 0}
 --- !u!1 &3879457628094823217
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,10 +226,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fill: 0
   BottleWidth: 0
-  BottleMiny: -0.15
-  BottleMaxy: 1.1
-  Dimensions: {x: 0, y: 0}
-  Volume: 0
+  BottleEmptyX: 0
+  BottleFullX: 0
+  BottleEmptyY: 0
+  BottleFullY: 0
+  Volume: 2
   BodyColor: {r: 0, g: 0, b: 0, a: 1}
   RimColor: {r: 0, g: 0, b: 0, a: 1}
   totalVolume: 0

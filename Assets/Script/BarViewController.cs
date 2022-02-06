@@ -7,37 +7,48 @@ public class BarViewController : MonoBehaviour
     public static BarViewController main;
     public GameObject DrinkController;
     public GameObject BottleParent;
+    public ShakerController shaker;
     Animator animator;
     void Awake()
     {
         main = this;
         animator = DrinkController.GetComponent<Animator>();
+        shaker = DrinkController.GetComponentInChildren<ShakerController>();
     }
-
-    bool pouring = false;
     void Update()
     {
-        pouring = false;
-        if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() && (myDrink == null || !LeanTween.isTweening(myDrink.gameObject)))
-        { 
-                foreach (Touch touch in Input.touches)
+        bool pouring = false;
+        bool shaking = false;
+        if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log(GameController.main.state);
+            if (GameController.main.state == GameController.GameState.shaker)
             {
-                if (touch.phase > TouchPhase.Began)
+                shaking = true;
+            }
+            else if (myDrink == null || !LeanTween.isTweening(myDrink.gameObject))
+            {
+                foreach (Touch touch in Input.touches)
                 {
-                    pouring = true;
+                    if (touch.phase > TouchPhase.Began)
+                    {
+                        pouring = true;
+                    }
                 }
             }
         }
         animator.SetBool("Pouring", pouring);
+        animator.SetBool("Shaking", shaking);
     }
     private void OnDisable()
     {
         animator.SetBool("Pouring", false);
+        animator.SetBool("Shaking", false);
         ClearDrink();
     }
     public void OnVictory()
     {
-        animator.Play("Victory");
+        animator.SetTrigger("Victory");
     }
     SelectableBottle myDrink;
     public void ChangeDrink(SelectableBottle nBottle)
