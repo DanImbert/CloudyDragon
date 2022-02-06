@@ -8,6 +8,7 @@ public class SelectableBottle : MonoBehaviour
     Quaternion startRot;
     public float BottleHeight = 0;
     public LiquidSO mainLiquid;
+    public GameObject cork;
     private void Awake()
     {
         startPos = transform.position;

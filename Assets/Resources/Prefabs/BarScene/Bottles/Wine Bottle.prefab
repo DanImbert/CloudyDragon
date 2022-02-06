@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleHeight
-      value: 1.8
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 3734376116173884756, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Mesh
@@ -155,6 +155,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6563537449617100329, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e7f474e72c8cb1429e2191f38bfe830, type: 2}
     - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleMaxy
       value: 0.5
