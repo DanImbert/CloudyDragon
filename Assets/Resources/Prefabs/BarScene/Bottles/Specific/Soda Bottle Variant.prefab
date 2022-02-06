@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7411439843df16e42b8ea58638511967, type: 2}
     - target: {fileID: 4689521054424837881, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Name
-      value: Soda Bottle
+      value: Soda Bottle Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_RootOrder
