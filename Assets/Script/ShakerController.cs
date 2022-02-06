@@ -14,8 +14,8 @@ public class ShakerController : MonoBehaviour
     }
     public void SetTransparent(bool value)
     {
-        OpaqueBody.SetActive(!value);
         Lid.SetActive(!value);
+        OpaqueBody.SetActive(!value);
         TransparentBody.SetActive(value);
     }
 }

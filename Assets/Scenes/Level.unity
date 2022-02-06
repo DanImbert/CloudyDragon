@@ -495,14 +495,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1956384329217926126, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1956384329217926126, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5967950857628132190, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: isMain
       value: 1
@@ -554,6 +546,10 @@ PrefabInstance:
     - target: {fileID: 7423323650443768412, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: m_Name
       value: Shaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400029369980666673, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: pourVolume
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8400029369980666673, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: targetReciever

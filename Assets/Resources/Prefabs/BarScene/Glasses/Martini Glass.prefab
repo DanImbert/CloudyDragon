@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Container: {fileID: 0}
+  isMain: 0
 --- !u!1 &3879457628094823217
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,8 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fill: 0
   BottleWidth: 0
-  BottleEmptyX: 0
-  BottleFullX: 0
+  BottleEmptyX: 0.97
+  BottleFullX: 0.3
   BottleEmptyY: 0
   BottleFullY: 0
   Volume: 2
