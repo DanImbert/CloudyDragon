@@ -71,7 +71,6 @@ public class LiquidPourer : MonoBehaviour
             }*/
             StartCoroutine(TransferLiquid(LiquidReciever.main.Container));
             yield return new WaitForSeconds(PourInterval);
-            LiquidReciever.main.GetComponent<LiquidWobble>().MakeRipple(.03f);
         }
         StopPouring();
     }

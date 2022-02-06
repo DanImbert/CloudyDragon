@@ -18,7 +18,7 @@ public class LiquidReciever : MonoBehaviour
         if (other.TryGetComponent<LiquidPourer>(out LiquidPourer pourer))
         {
             ReadjustHeight();
-            
+            myWobbler.MakeRipple(.03f);
         }
     }
     public void ReadjustHeight()
