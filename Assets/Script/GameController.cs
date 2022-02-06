@@ -32,17 +32,16 @@ public class GameController : MonoBehaviour
     }
     public enum GameState
     {
-        bar,
-        shelf,
-        shaker,
-        endgame
+        bar = 0,
+        shelf = 1,
+        shaker = 2,
+        endgame = 3
     }
     public GameState state;
     void ChangeView(GameState view)
     {
         state = view;
         BarViewMenu.gameObject.SetActive(view == GameState.bar);
-        BarView.gameObject.SetActive(view == GameState.bar);
         BarView.gameObject.SetActive(view == GameState.bar || view == GameState.shaker);
         ShelfView.gameObject.SetActive(view == GameState.shelf);
         ShelfViewMenu.gameObject.SetActive(view == GameState.shelf);
@@ -63,14 +62,17 @@ public class GameController : MonoBehaviour
                 break;
         }
     }
-    public void GoToEndView()
+    public void GoToNextPhase()
     {
-
-    }
-    public void EndTheGame(LIquidContainer cocktailFinal)
-    {
-        ChangeView(GameState.shaker);
-        EndGameScreen.AssessDrink(cocktailFinal);
-        BarView.OnVictory();
+        if (state == GameState.shaker)
+        {
+            ChangeView(GameState.endgame);
+            EndGameScreen.AssessDrink(LiquidReciever.main.Container);
+            BarView.OnVictory();
+        }
+        else
+        {
+            ChangeView(GameState.shaker);
+        }
     }
 }

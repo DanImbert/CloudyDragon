@@ -129,8 +129,8 @@ public class LiquidPourer : MonoBehaviour
         yield return new WaitForSeconds(.3f);
 
         myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);
-        if (otherC.GetFillPercent() >= 1)
-            GameController.main.EndTheGame(otherC);
+        if (otherC.GetFillPercent() >= 1 && GameController.main.state < GameController.GameState.shaker)
+            GameController.main.GoToNextPhase();
     }
     private void OnDisable()
     {
