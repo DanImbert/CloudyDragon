@@ -95,6 +95,22 @@ PrefabInstance:
       propertyPath: BottleMiny
       value: 1.9
       objectReference: {fileID: 0}
+    - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: BottleFullX
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: BottleFullY
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: BottleEmptyX
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: BottleEmptyY
+      value: 0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 6619719082982332613, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1

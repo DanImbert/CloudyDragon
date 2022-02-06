@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BodyColor: {r: 1, g: 0, b: 0.09803922, a: 1}
   RimColor: {r: 0.4509804, g: 0, b: 0.09803922, a: 1}
-  RimStrength: 0.5
+  RimStrength: 0.66
   FoamColor: {r: 0.49019608, g: 0, b: 0.09803922, a: 1}
   Foaming: 0.2
   DeFoaming: 0.3
