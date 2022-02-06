@@ -215,9 +215,4 @@ public class LIquidContainer : MonoBehaviour
     }
 
     #endregion
-    /*private void OnValidate()
-    {
-        mesh = GetComponent<MeshRenderer>();
-        ChangeVolume();
-    }*/
 }

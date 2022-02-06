@@ -436,18 +436,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6630623859879633482, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
   m_PrefabInstance: {fileID: 6630623860059368053}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &894142528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894142526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa3507fc8258614499d38a16d80e39d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &959006375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1138217579098145966, guid: 4d94b67dd1e6af34aba1375ddaf358a1, type: 3}
@@ -1123,34 +1111,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 6630623860285936697, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6630623860285936702, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -150
-      objectReference: {fileID: 0}
-    - target: {fileID: 6630623860285936703, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
-      propertyPath: m_Name
-      value: Drink Title
-      objectReference: {fileID: 0}
     - target: {fileID: 6630623860504975243, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 959006375}
-    - target: {fileID: 6630623860683159341, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6630623861381792189, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 255046442}
-    - target: {fileID: 6630623861469316137, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
 --- !u!1001 &7533257977707355554
@@ -1164,10 +1132,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1115111896}
-    - target: {fileID: 7533257978101452790, guid: d064c0b6688d6ab44a31a7ab7a4636d6, type: 3}
-      propertyPath: m_text
-      value: Menu
-      objectReference: {fileID: 0}
     - target: {fileID: 7533257978176713744, guid: d064c0b6688d6ab44a31a7ab7a4636d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -9,8 +9,6 @@ public class RecipeViewController : MonoBehaviour
     void Awake()
     {
         recipeText = GetComponentInChildren<TextMeshProUGUI>();
-
-
     }
 
     void Start()
@@ -19,7 +17,7 @@ public class RecipeViewController : MonoBehaviour
 
         foreach (RecipeSO.CocktailMix req in GameController.main.winCondition.Requirements)
         {
-            recipeText.text += "\n" + req.Spirit.name +": " + Mathf.Floor(req.Percentage*10)+" part";
+            recipeText.text += "\n" + req.Spirit.name +": " + Mathf.Floor(req.Percentage*10)+" parts";
         }
     }
 }
