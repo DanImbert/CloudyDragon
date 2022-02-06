@@ -57,7 +57,8 @@ public class ShelfViewController : MonoBehaviour
     }
     public void ClearSelection()
     {
-        SelectedBottle.ResetPosition();
+        if (SelectedBottle!=null)
+            SelectedBottle.ResetPosition();
         ShelfMenuController.main.ClearText();
         SelectedBottle = null;
     }

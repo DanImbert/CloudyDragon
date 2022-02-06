@@ -22,6 +22,6 @@ public class ShelfMenuController : MonoBehaviour
     }
     public void ClearText()
     {
-        text.text = "SELECT YOUR DRINK";
+        text.text = "";
     }
 }
