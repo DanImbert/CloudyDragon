@@ -15,11 +15,14 @@ public class BarViewController : MonoBehaviour
     void Update()
     {
         pouring = false;
-        foreach (Touch touch in Input.touches)
+        if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            if (touch.phase > TouchPhase.Began)
+            foreach (Touch touch in Input.touches)
             {
-                pouring = true;
+                if (touch.phase > TouchPhase.Began)
+                {
+                    pouring = true;
+                }
             }
         }
         animator.SetBool("Pouring", pouring);

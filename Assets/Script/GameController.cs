@@ -38,11 +38,22 @@ public class GameController : MonoBehaviour
     void ChangeView(Window view)
     {
         BarViewMenu.gameObject.SetActive(view == Window.bar);
-        BarView.gameObject.SetActive(view == Window.bar || view == Window.endgame);
+        BarView.gameObject.SetActive(view == Window.bar);
         ShelfView.gameObject.SetActive(view == Window.shelf);
         ShelfViewMenu.gameObject.SetActive(view == Window.shelf);
         ShelfViewMenu.gameObject.SetActive(view == Window.shelf);
         EndGameScreen.gameObject.SetActive(view == Window.endgame);
+
+        switch (view)
+        {
+            case Window.shelf:
+                CameraController.main.MoveToPosition(ShelfView.transform);
+                break;
+            case Window.bar:
+            case Window.endgame:
+                CameraController.main.MoveToPosition(BarView.transform);
+                break;
+        }
     }
     public void EndTheGame(LIquidContainer cocktailFinal)
     {

@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class ShelfViewController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    SelectableBottle[] Interactables;
+    SelectableBottle SelectedBottle;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        Interactables = GetComponentsInChildren<SelectableBottle>();
+    }
     void Update()
     {
-        
+            foreach (Touch touch in Input.touches)
+        {
+            if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+            {
+                if (touch.phase == TouchPhase.Began)
+                {
+                }
+            }
+        }
+    }
+    public void SelectBottle()
+    {
+
     }
 }
