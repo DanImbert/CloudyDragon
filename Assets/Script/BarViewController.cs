@@ -59,6 +59,7 @@ public class BarViewController : MonoBehaviour
 
         myDrink.transform.position = oPos;
         myDrink.transform.rotation = oRot;
+        myDrink.GetComponentInChildren<LiquidPourer>().ChangeTarget(shaker.reciever);
 
         LeanTween.cancel(myDrink.gameObject);
         LeanTween.moveLocal(myDrink.gameObject, Vector3.zero + myDrink.BottleHeight * Vector3.down * .5f, 1);

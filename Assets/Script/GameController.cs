@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
         if (state == GameState.shaker)
         {
             ChangeView(GameState.endgame);
-            EndGameScreen.AssessDrink(LiquidReciever.main.Container);
+            EndGameScreen.AssessDrink(BarView.shaker.GetComponent<LiquidContainer>());
             BarView.OnVictory();
         }
         else

@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26bb9d906ef139499f22e3f3508617b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pourVolume: 2
+  pourVolume: 1
   pourForce: 2
   targetReciever: {fileID: 0}
 --- !u!198 &1956384329217926126

@@ -8,9 +8,12 @@ public class ShakerController : MonoBehaviour
     public GameObject OpaqueBody;
     public GameObject TransparentBody;
 
+    public LiquidReciever reciever;
+
     private void Awake()
     {
         SetTransparent(false);
+        reciever = GetComponentInChildren<LiquidReciever>();
     }
     public void SetTransparent(bool value)
     {

@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class LiquidReciever : MonoBehaviour
 {
-    public static LiquidReciever main;
     public LiquidContainer Container;
-    public bool isMain = false;
     LiquidWobble myWobbler;
     private void Awake()
     {
-        if (isMain)
-            main = this;
         Container = transform.parent.GetComponentInChildren<LiquidContainer>();
         myWobbler = transform.parent.GetComponentInChildren<LiquidWobble>();
     }
