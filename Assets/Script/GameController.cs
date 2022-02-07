@@ -73,7 +73,7 @@ public class GameController : MonoBehaviour
         else
         {
             ChangeView(GameState.shaker);
-            BarView.Invoke("ClearDrink",1f);
+            BarView.Invoke("ClearDrink",.5f);
         }
     }
 }
