@@ -9,6 +9,7 @@ public class SelectableBottle : MonoBehaviour
     public float BottleHeight = 0;
     public LiquidSO mainLiquid;
     public GameObject cork;
+    public AudioSource playSelect;
     private void Awake()
     {
         startPos = transform.position;
@@ -23,11 +24,14 @@ public class SelectableBottle : MonoBehaviour
         }
         lc.OnVolumeChange(true);
         SetDisplayMode();
+      
     }
     public void MoveToPosition(Vector3 pos)
     {
         LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, pos, .25f);
+        playSelect.Play();
+
     }
     public void ResetPosition()
     {
@@ -42,6 +46,7 @@ public class SelectableBottle : MonoBehaviour
         GetComponentInChildren<LiquidPourer>().enabled = false;
         if (cork != null)
             cork.SetActive(true);
+        
     }
     public void SetPourMode()
     {

@@ -7,6 +7,7 @@ public class ShakerController : MonoBehaviour
     public GameObject Lid;
     public GameObject OpaqueBody;
     public GameObject TransparentBody;
+    public AudioSource shakeSound;
 
     public LiquidReciever reciever;
 
@@ -20,5 +21,6 @@ public class ShakerController : MonoBehaviour
         Lid.SetActive(!value);
         OpaqueBody.SetActive(!value);
         TransparentBody.SetActive(value);
+        shakeSound.Play();
     }
 }
