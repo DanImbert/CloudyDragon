@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0bc5db370d5d0419b350f2a16ccb2e, type: 3}
   m_Name: Lime Juice
   m_EditorClassIdentifier: 
-  BodyColor: {r: 1, g: 0.9916045, b: 0.504717, a: 1}
-  RimColor: {r: 0.56593233, g: 0.6698113, b: 0.25591847, a: 1}
+  BodyColor: {r: 1, g: 0.984127, b: 0, a: 1}
+  RimColor: {r: 0.745283, g: 1, b: 0, a: 1}
   RimStrength: 3
   FoamColor: {r: 0.8627451, g: 0.9019608, b: 0.74509805, a: 1}
   Foaming: 0.2
