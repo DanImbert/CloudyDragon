@@ -89,7 +89,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecOffset: 0.546
     - _SpecSize: 0.904
-    - _SpecSize2: 0.999
+    - _SpecSize2: 0.9
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
@@ -99,7 +99,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 0.47058824}
+    - _Color: {r: 0.65882355, g: 0.65882355, b: 0.65882355, a: 0.15686275}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 0.051886797, b: 0.051886797, a: 1}
     - _RimColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
