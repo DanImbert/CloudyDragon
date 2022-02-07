@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleFullY
-      value: -1.05
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleEmptyX
