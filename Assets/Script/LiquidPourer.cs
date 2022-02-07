@@ -7,14 +7,14 @@ public class LiquidPourer : MonoBehaviour
     float PourInterval = 0;
     public float pourVolume = 1f;
     public float pourForce = 1f;
-    LiquidContainer myContainer;
+    LiquidHolder myContainer;
     ParticleSystem Particle;
     public LiquidReciever targetReciever;
     private void Awake()
     {
         //copyNode = LiquidEmitter.transform.GetChild(0);
         //liquidTrail = LiquidEmitter.GetComponent<TrailRenderer>();
-        myContainer = transform.parent.GetComponentInChildren<LiquidContainer>();
+        myContainer = transform.parent.GetComponentInChildren<LiquidHolder>();
         Particle = GetComponent<ParticleSystem>();
         PourInterval = 1f / Particle.emission.rateOverTime.constant;
 
@@ -129,7 +129,7 @@ public class LiquidPourer : MonoBehaviour
             liquidTrail.SetPositions(positions.ToArray());
         }
         }*/
-    protected IEnumerator TransferLiquid(LiquidContainer otherC)
+    protected IEnumerator TransferLiquid(LiquidHolder otherC)
     {
         yield return new WaitForSeconds(.3f);
         myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);

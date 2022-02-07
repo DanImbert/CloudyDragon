@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LiquidContainer : MonoBehaviour
+public class LiquidHolder : MonoBehaviour
 {
     Material mat;
     MeshRenderer mesh;
@@ -155,7 +155,7 @@ public class LiquidContainer : MonoBehaviour
         else
             contents.Add(liquid, amount);
     }
-    public void TransferLiquid(LiquidContainer cOther, float amount, bool substract)
+    public void TransferLiquid(LiquidHolder cOther, float amount, bool substract)
     {
         float percent = Mathf.Min(1,amount / totalVolume);
         //Debug.Log("Transfer " + amount + " from " + name + " to " + cOther.name + " " + cOther.totalVolume);

@@ -12,7 +12,7 @@ public class EndGameScreenController : MonoBehaviour
         title = transform.Find("Cocktail Name").GetComponent<TextMeshProUGUI>();
         ScoreView = transform.Find("Rating").gameObject;
     }
-    public void AssessDrink(LiquidContainer cocktailFinal)
+    public void AssessDrink(LiquidHolder cocktailFinal)
     {
         title.text = GameController.main.winCondition.name;
 

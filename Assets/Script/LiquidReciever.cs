@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LiquidReciever : MonoBehaviour
 {
-    public LiquidContainer Container;
+    public LiquidHolder Container;
     LiquidWobble myWobbler;
     private void Awake()
     {
-        Container = transform.parent.GetComponentInChildren<LiquidContainer>();
+        Container = transform.parent.GetComponentInChildren<LiquidHolder>();
         myWobbler = transform.parent.GetComponentInChildren<LiquidWobble>();
     }
     private void OnParticleCollision(GameObject other)

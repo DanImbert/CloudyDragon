@@ -16,7 +16,7 @@ public class SelectableBottle : MonoBehaviour
     }
     private void Start()
     {
-    LiquidContainer lc = GetComponentInChildren<LiquidContainer>();
+    LiquidHolder lc = GetComponentInChildren<LiquidHolder>();
         if (mainLiquid != null)
         {
             lc.AddLiquid(mainLiquid, lc.Volume * lc.Fill);
