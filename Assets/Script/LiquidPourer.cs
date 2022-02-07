@@ -86,8 +86,6 @@ public class LiquidPourer : MonoBehaviour
     {
         // liquidTrail.emitting = true;
         UpdateLiquid();
-        if (!Particle.isPlaying)
-            Particle.Play();
     }
     public void StopPouring()
     {
