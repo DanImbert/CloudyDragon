@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue Glass
+  m_Name: Dark Green Glass
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
@@ -73,7 +73,7 @@ Material:
     - _FillAmount: 0.3
     - _FresnelInner: 0.69
     - _GlossMapScale: 1
-    - _Glossiness: 0.9
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 3
@@ -100,12 +100,12 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.42745098, b: 0.6431373, a: 0.24313726}
+    - _Color: {r: 0.013705952, g: 0.41509432, b: 0.04576206, a: 0.23529412}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 0.051886797, b: 0.051886797, a: 1}
     - _RimColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
     - _RimColor2: {r: 0.5496618, g: 0.6037736, b: 0.56754225, a: 0.2}
-    - _SColor: {r: 0.5943396, g: 0.5242524, b: 0.5242524, a: 0.972549}
+    - _SColor: {r: 0.5990566, g: 0.88511854, b: 1, a: 0.047058824}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _TopColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
