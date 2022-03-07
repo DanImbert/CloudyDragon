@@ -1,56 +1,8 @@
 fileFormatVersion: 2
-guid: 88e27397147a7e143a1a51d9fbbf0b83
+guid: 0184e2594c8e785479ce8556afb312d5
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: -5791511809027754855
-    second: Base|BaseAction
-  - first:
-      74: -3807277891474543834
-    second: Base|BladeAction
-  - first:
-      74: -2950221705603343106
-    second: Base|CupAction
-  - first:
-      74: 487119523966224850
-    second: Base|LidAction
-  - first:
-      74: -1069952236325839335
-    second: Cup|BaseAction
-  - first:
-      74: -3836185496775715113
-    second: Cup|BladeAction
-  - first:
-      74: -1833230341546267009
-    second: Cup|CupAction
-  - first:
-      74: 8264958372834209987
-    second: Cup|LidAction
-  - first:
-      74: 8491701737915588590
-    second: Blade|BaseAction
-  - first:
-      74: -5103704624721115774
-    second: Blade|BladeAction
-  - first:
-      74: -5872876347784022893
-    second: Blade|CupAction
-  - first:
-      74: -9125038985988811155
-    second: Blade|LidAction
-  - first:
-      74: -4654496015696338923
-    second: Lid|BaseAction
-  - first:
-      74: 7810292007491408187
-    second: Lid|BladeAction
-  - first:
-      74: 262410598509538748
-    second: Lid|CupAction
-  - first:
-      74: 5459680137192636663
-    second: Lid|LidAction
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
