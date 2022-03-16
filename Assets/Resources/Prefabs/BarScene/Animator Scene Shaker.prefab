@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8991532614958058375}
   - component: {fileID: 8991532614958058376}
   m_Layer: 0
-  m_Name: Animator Scene
+  m_Name: Animator Scene Shaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
