@@ -7,37 +7,47 @@ public class BarViewController : MonoBehaviour
     public static BarViewController main;
     public GameObject DrinkController;
     public GameObject BottleParent;
+    public ShakerController shaker;
     Animator animator;
     void Awake()
     {
         main = this;
         animator = DrinkController.GetComponent<Animator>();
+        shaker = DrinkController.GetComponentInChildren<ShakerController>();
     }
-
-    bool pouring = false;
     void Update()
     {
-        pouring = false;
-        if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() && (myDrink == null || !LeanTween.isTweening(myDrink.gameObject)))
-        { 
-                foreach (Touch touch in Input.touches)
+        bool pouring = false;
+        bool shaking = false;
+        if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        {
+            if (GameController.main.state == GameController.GameState.shaker)
             {
-                if (touch.phase > TouchPhase.Began)
+                shaking = Input.touches.Length>0;
+            }
+            else if (myDrink == null || !LeanTween.isTweening(myDrink.gameObject))
+            {
+                foreach (Touch touch in Input.touches)
                 {
-                    pouring = true;
+                    if (touch.phase > TouchPhase.Began)
+                    {
+                        pouring = true;
+                    }
                 }
             }
         }
         animator.SetBool("Pouring", pouring);
+        animator.SetBool("Shaking", shaking);
     }
     private void OnDisable()
     {
         animator.SetBool("Pouring", false);
+        animator.SetBool("Shaking", false);
         ClearDrink();
     }
     public void OnVictory()
     {
-        animator.Play("Victory");
+        animator.SetTrigger("Victory");
     }
     SelectableBottle myDrink;
     public void ChangeDrink(SelectableBottle nBottle)
@@ -49,9 +59,10 @@ public class BarViewController : MonoBehaviour
 
         myDrink.transform.position = oPos;
         myDrink.transform.rotation = oRot;
+        myDrink.GetComponentInChildren<LiquidPourer>().ChangeTarget(shaker.reciever);
 
         LeanTween.cancel(myDrink.gameObject);
-        LeanTween.moveLocal(myDrink.gameObject, Vector3.zero + myDrink.BottleHeight * Vector3.down, 1);
+        LeanTween.moveLocal(myDrink.gameObject, Vector3.zero + myDrink.BottleHeight * Vector3.down * .5f, 1);
         LeanTween.rotateLocal(myDrink.gameObject, Vector3.zero, 1);
 
         myDrink.SetPourMode();

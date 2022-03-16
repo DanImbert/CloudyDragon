@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public RecipeSO winCondition;
     public GameObject BarViewMenu;
     public GameObject ShelfViewMenu;
+    public GameObject ShakeViewMenu;
     public EndGameScreenController EndGameScreen;
     public ShelfViewController ShelfView;
     public BarViewController BarView;
@@ -23,42 +24,56 @@ public class GameController : MonoBehaviour
 
     public void GoToBarView()
     {
-        ChangeView(Window.bar);
+        ChangeView(GameState.bar);
     }
     public void GoToShelfView()
     {
-        ChangeView(Window.shelf);
+        ChangeView(GameState.shelf);
     }
-    enum Window
+    public enum GameState
     {
-        bar,
-        shelf,
-        endgame
+        bar = 0,
+        shelf = 1,
+        shaker = 2,
+        endgame = 3
     }
-    void ChangeView(Window view)
+    public GameState state;
+    void ChangeView(GameState view)
     {
-        BarViewMenu.gameObject.SetActive(view == Window.bar);
-        BarView.gameObject.SetActive(view == Window.bar);
-        ShelfView.gameObject.SetActive(view == Window.shelf);
-        ShelfViewMenu.gameObject.SetActive(view == Window.shelf);
-        ShelfViewMenu.gameObject.SetActive(view == Window.shelf);
-        EndGameScreen.gameObject.SetActive(view == Window.endgame);
+        state = view;
+        BarViewMenu.gameObject.SetActive(view == GameState.bar);
+        BarView.gameObject.SetActive(view == GameState.bar || view == GameState.shaker);
+        BarViewController.main.shaker.SetTransparent(view == GameState.bar);
+        ShelfView.gameObject.SetActive(view == GameState.shelf);
+        ShelfViewMenu.gameObject.SetActive(view == GameState.shelf);
+        ShelfViewMenu.gameObject.SetActive(view == GameState.shelf);
+        ShakeViewMenu.gameObject.SetActive(view == GameState.shaker);
+        EndGameScreen.gameObject.SetActive(view == GameState.endgame);
 
         switch (view)
         {
-            case Window.shelf:
+            case GameState.shelf:
                 CameraController.main.MoveToPosition(ShelfView.transform);
                 break;
-            case Window.bar:
-            case Window.endgame:
+            case GameState.bar:
+            case GameState.endgame:
+            case GameState.shaker:
                 CameraController.main.MoveToPosition(BarView.transform);
                 break;
         }
     }
-    public void EndTheGame(LIquidContainer cocktailFinal)
+    public void GoToNextPhase()
     {
-        ChangeView(Window.endgame);
-        EndGameScreen.AssessDrink(cocktailFinal);
-        BarView.OnVictory();
+        if (state == GameState.shaker)
+        {
+            ChangeView(GameState.endgame);
+            EndGameScreen.AssessDrink(BarView.shaker.GetComponent<LiquidHolder>());
+            BarView.OnVictory();
+        }
+        else
+        {
+            ChangeView(GameState.shaker);
+            BarView.Invoke("ClearDrink",.5f);
+        }
     }
 }

@@ -16,7 +16,7 @@ public class SelectableBottle : MonoBehaviour
     }
     private void Start()
     {
-    LIquidContainer lc = GetComponentInChildren<LIquidContainer>();
+    LiquidHolder lc = GetComponentInChildren<LiquidHolder>();
         if (mainLiquid != null)
         {
             lc.AddLiquid(mainLiquid, lc.Volume * lc.Fill);
@@ -26,22 +26,27 @@ public class SelectableBottle : MonoBehaviour
     }
     public void MoveToPosition(Vector3 pos)
     {
+        LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, pos, .25f);
     }
     public void ResetPosition()
     {
         if (!LeanTween.isTweening(gameObject))
         {
-            LeanTween.move(gameObject, startPos, .5f);
-            LeanTween.rotate(gameObject, startRot.eulerAngles, .5f);
+            LeanTween.move(gameObject, startPos, 1);
+            LeanTween.rotate(gameObject, startRot.eulerAngles, 1);
         }
     }
     public void SetDisplayMode()
     {
         GetComponentInChildren<LiquidPourer>().enabled = false;
+        if (cork != null)
+            cork.SetActive(true);
     }
     public void SetPourMode()
     {
         GetComponentInChildren<LiquidPourer>().enabled = true;
+        if (cork != null)
+            cork.SetActive(false);
     }
 }

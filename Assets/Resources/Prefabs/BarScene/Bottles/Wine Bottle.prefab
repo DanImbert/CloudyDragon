@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 830126209277694389, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.372
+      value: 1.288
       objectReference: {fileID: 0}
     - target: {fileID: 830126209277694389, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleHeight
-      value: 2.25
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3734376116173884756, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Mesh
@@ -105,15 +105,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalPosition.x

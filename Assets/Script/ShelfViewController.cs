@@ -53,7 +53,7 @@ public class ShelfViewController : MonoBehaviour
     {
         SelectedBottle = bottle;
         ShelfMenuController.main.ChangeText(bottle.mainLiquid == null ? "EMPTY" : bottle.mainLiquid.name);
-        SelectedBottle.MoveToPosition(transform.position + transform.forward * 3 + bottle.BottleHeight * Vector3.down*.5f);
+        SelectedBottle.MoveToPosition(transform.position + transform.forward * 5);
     }
     public void ClearSelection()
     {

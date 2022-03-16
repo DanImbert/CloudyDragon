@@ -7,14 +7,14 @@ public class LiquidPourer : MonoBehaviour
     float PourInterval = 0;
     public float pourVolume = 1f;
     public float pourForce = 1f;
-    LIquidContainer myContainer;
+    LiquidHolder myContainer;
     ParticleSystem Particle;
-
+    public LiquidReciever targetReciever;
     private void Awake()
     {
         //copyNode = LiquidEmitter.transform.GetChild(0);
         //liquidTrail = LiquidEmitter.GetComponent<TrailRenderer>();
-        myContainer = transform.parent.GetComponentInChildren<LIquidContainer>();
+        myContainer = transform.parent.GetComponentInChildren<LiquidHolder>();
         Particle = GetComponent<ParticleSystem>();
         PourInterval = 1f / Particle.emission.rateOverTime.constant;
 
@@ -36,14 +36,19 @@ public class LiquidPourer : MonoBehaviour
           nNode.transform.SetParent(LiquidEmitter.transform);
           return nNode.transform;
       }*/
-    private void OnEnable()
+    protected void OnEnable()
     {
-        if (LiquidReciever.main!=null)
+        ChangeTarget(targetReciever);
+    }
+    public void ChangeTarget(LiquidReciever nTarget)
+    {
+        if (nTarget != null )
         {
-            Particle.collision.AddPlane(LiquidReciever.main.transform);
+            targetReciever = nTarget;
+            Particle.collision.SetPlane(0,targetReciever.transform);
         }
     }
-    void FixedUpdate()
+    protected void FixedUpdate()
     {
         PourLiquid();
     }
@@ -55,7 +60,7 @@ public class LiquidPourer : MonoBehaviour
         }
     }
     Coroutine PourCoroutine;
-    public IEnumerator PourLiquidCoroutine()
+    protected IEnumerator PourLiquidCoroutine()
     {
         StartPouring();
         while (transform.up.y < 0 && myContainer.totalVolume > 0)
@@ -69,18 +74,18 @@ public class LiquidPourer : MonoBehaviour
                 waterDrain.GetComponent<Rigidbody>().velocity = transform.up * pourForce;
                 waterDrain.transform.SetAsLastSibling();
             }*/
-
+            if (!Particle.isPlaying)
+                Particle.Play();
+            StartCoroutine(TransferLiquid(targetReciever.Container));
             yield return new WaitForSeconds(PourInterval);
         }
         StopPouring();
     }
 
-    public void StartPouring()
+    protected void StartPouring()
     {
         // liquidTrail.emitting = true;
         UpdateLiquid();
-        if (!Particle.isPlaying)
-            Particle.Play();
     }
     public void StopPouring()
     {
@@ -90,7 +95,7 @@ public class LiquidPourer : MonoBehaviour
         Particle.Stop();
         PourCoroutine = null;
     }
-    public void UpdateLiquid()
+    protected void UpdateLiquid()
     {
         ParticleSystem.TrailModule pSys = Particle.trails;
         pSys.colorOverTrail = new ParticleSystem.MinMaxGradient(myContainer.RimColor, myContainer.BodyColor);
@@ -124,11 +129,14 @@ public class LiquidPourer : MonoBehaviour
             liquidTrail.SetPositions(positions.ToArray());
         }
         }*/
-    public void TransferLiquid(LIquidContainer otherC)
+    protected IEnumerator TransferLiquid(LiquidHolder otherC)
     {
+        yield return new WaitForSeconds(.3f);
         myContainer.TransferLiquid(otherC, pourVolume * PourInterval,true);
+        if (otherC.GetFillPercent() >= 1 && GameController.main.state < GameController.GameState.shaker)
+            GameController.main.GoToNextPhase();
     }
-    private void OnDisable()
+    protected void OnDisable()
     {
         StopPouring();
     }

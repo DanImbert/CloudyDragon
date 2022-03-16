@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0bc5db370d5d0419b350f2a16ccb2e, type: 3}
   m_Name: Vodka
   m_EditorClassIdentifier: 
-  BodyColor: {r: 1, g: 0.9842106, b: 0.5424528, a: 1}
-  RimColor: {r: 1, g: 1, b: 1, a: 1}
+  BodyColor: {r: 1, g: 1, b: 1, a: 1}
+  RimColor: {r: 1, g: 0.98185354, b: 0.48584908, a: 1}
   RimStrength: 8
   FoamColor: {r: 0.5838377, g: 0.6037736, b: 0.5847335, a: 1}
   Foaming: 0
