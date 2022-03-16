@@ -1,88 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3905313764618785142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5882935476369376310}
-  - component: {fileID: 3183139164691283110}
-  - component: {fileID: 8956910378831120067}
-  m_Layer: 0
-  m_Name: Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5882935476369376310
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3905313764618785142}
-  m_LocalRotation: {x: 0.00000001950127, y: 0.4515038, z: -0.000000009867988, w: 0.8922692}
-  m_LocalPosition: {x: 0.018, y: -0.522, z: 0.012}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4362598494753658727}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 53.68, z: 0}
---- !u!33 &3183139164691283110
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3905313764618785142}
-  m_Mesh: {fileID: -2157731557071279394, guid: d6d5ddd014b13a243920b5b2e9a23db4, type: 3}
---- !u!23 &8956910378831120067
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3905313764618785142}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 79adc9453a6533543a66878385562ab9, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &8562545854332232484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7411439843df16e42b8ea58638511967, type: 2}
     - target: {fileID: 4689521054424837881, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Name
-      value: Soda Bottle Variant
+      value: Soda Bottle
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_RootOrder
@@ -144,8 +61,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
---- !u!4 &4362598494753658727 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
-  m_PrefabInstance: {fileID: 8562545854332232484}
-  m_PrefabAsset: {fileID: 0}

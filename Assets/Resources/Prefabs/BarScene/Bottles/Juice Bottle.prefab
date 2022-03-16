@@ -8,16 +8,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 830126209277694389, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 830126209277694389, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.389
-      objectReference: {fileID: 0}
-    - target: {fileID: 830126209277694389, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0.484
       objectReference: {fileID: 0}
     - target: {fileID: 898367769707208608, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Mesh
@@ -25,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 1215230190209833024, guid: 7e6b9d3fae28963428fbc89f2e43e0d5, type: 3}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleHeight
-      value: 3
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 3734376116173884756, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Mesh
@@ -45,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.4
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.4
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.4
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleFullY
-      value: -1
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 6613115304838076911, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleEmptyX
