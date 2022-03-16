@@ -8,7 +8,7 @@ public class ShakerController : MonoBehaviour
     public GameObject OpaqueBody;
     public GameObject TransparentBody;
 
-    public LiquidReciever reciever;
+    [HideInInspector] public LiquidReciever reciever;
 
     private void Awake()
     {

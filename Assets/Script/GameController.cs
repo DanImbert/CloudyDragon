@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public EndGameScreenController EndGameScreen;
     public ShelfViewController ShelfView;
     public BarViewController BarView;
+    public LiquidReciever FinalDrinkLR;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
+        BarViewController.main.shaker.GetComponentInChildren<LiquidPourer>().ChangeTarget(FinalDrinkLR) ;
         GoToShelfView();
     }
 
