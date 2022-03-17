@@ -294,6 +294,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: BottleFullX
+      value: -2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: BottleFullY
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: BottleEmptyX
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: BottleEmptyY
+      value: 1.84
+      objectReference: {fileID: 0}
     - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: m_RootOrder
       value: 0
