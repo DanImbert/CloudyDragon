@@ -11,6 +11,11 @@ public class RecipeViewController : MonoBehaviour
         recipeText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
+    public void OnEnable()
+    {
+        //TODO Audio: Add Bringup Recipe Sound
+    }
+
     void Start()
     {
         recipeText.text = GameController.main.winCondition.name+"\n";

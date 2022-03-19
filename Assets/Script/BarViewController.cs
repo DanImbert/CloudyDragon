@@ -23,6 +23,7 @@ public class BarViewController : MonoBehaviour
         {
             if (GameController.main.state == GameController.GameState.shaker)
             {
+                //TODO Audio: Start shaking
                 shaking = Input.touches.Length>0;
             }
             else if (myDrink == null || !LeanTween.isTweening(myDrink.gameObject))
@@ -47,6 +48,7 @@ public class BarViewController : MonoBehaviour
     }
     public void OnVictory()
     {
+        //TODO Audio: Victory Sound
         animator.SetTrigger("Victory");
     }
     SelectableBottle myDrink;

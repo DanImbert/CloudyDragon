@@ -75,7 +75,10 @@ public class LiquidPourer : MonoBehaviour
                 waterDrain.transform.SetAsLastSibling();
             }*/
             if (!Particle.isPlaying)
+            {
                 Particle.Play();
+                //TODO Audio: Start Pouring Liquid
+            }
             StartCoroutine(TransferLiquid(targetReciever.Container));
             yield return new WaitForSeconds(PourInterval);
         }
@@ -93,6 +96,7 @@ public class LiquidPourer : MonoBehaviour
             StopCoroutine(PourCoroutine);
         //liquidTrail.emitting = false;
         Particle.Stop();
+        //TODO Audio: Stop Pouring Liquid
         PourCoroutine = null;
     }
     protected void UpdateLiquid()
