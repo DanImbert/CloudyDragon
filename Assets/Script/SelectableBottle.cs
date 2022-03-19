@@ -9,6 +9,8 @@ public class SelectableBottle : MonoBehaviour
     public float BottleHeight = 0;
     public LiquidSO mainLiquid;
     public GameObject cork;
+    public AudioSource pingSelect;
+   
     private void Awake()
     {
         startPos = transform.position;
@@ -20,6 +22,7 @@ public class SelectableBottle : MonoBehaviour
         if (mainLiquid != null)
         {
             lc.AddLiquid(mainLiquid, lc.Volume * lc.Fill);
+           
         }
         lc.OnVolumeChange(true);
         SetDisplayMode();
@@ -28,6 +31,7 @@ public class SelectableBottle : MonoBehaviour
     {
         LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, pos, .25f);
+        pingSelect.Play();
     }
     public void ResetPosition()
     {
@@ -35,18 +39,22 @@ public class SelectableBottle : MonoBehaviour
         {
             LeanTween.move(gameObject, startPos, 1);
             LeanTween.rotate(gameObject, startRot.eulerAngles, 1);
-        }
+           
+           
+}
     }
     public void SetDisplayMode()
     {
         GetComponentInChildren<LiquidPourer>().enabled = false;
         if (cork != null)
             cork.SetActive(true);
+        
     }
     public void SetPourMode()
     {
         GetComponentInChildren<LiquidPourer>().enabled = true;
         if (cork != null)
             cork.SetActive(false);
+        
     }
 }
