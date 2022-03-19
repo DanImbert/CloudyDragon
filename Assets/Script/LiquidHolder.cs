@@ -15,7 +15,7 @@ public class LiquidHolder : MonoBehaviour
     public float BottleFullY = 0;
 
     public float Volume = 10;
-
+    
     private void Awake()
     {
         mesh = GetComponent<MeshRenderer>();
@@ -61,6 +61,7 @@ public class LiquidHolder : MonoBehaviour
 
                 RimStrength += liquid.Key.RimStrength * percent;
                 foamStrength += liquid.Key.Foaming * percent;
+               
 
             }
         }
@@ -97,6 +98,7 @@ public class LiquidHolder : MonoBehaviour
             
                 fill = (BottleEmptyY + (BottleFullY - BottleEmptyY) * Fill) * fill + (BottleEmptyX + (BottleFullX - BottleEmptyX) * Fill) * (1-fill);
             mesh.material.SetFloat("_FillAmount", fill);
+           
         }
         else
         {

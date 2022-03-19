@@ -7,6 +7,8 @@ public class ShakerController : MonoBehaviour
     public GameObject Lid;
     public GameObject OpaqueBody;
     public GameObject TransparentBody;
+   
+   
 
     [HideInInspector] public LiquidReciever reciever;
 
@@ -20,5 +22,6 @@ public class ShakerController : MonoBehaviour
         Lid.SetActive(!value);
         OpaqueBody.SetActive(!value);
         TransparentBody.SetActive(value);
+        
     }
 }
