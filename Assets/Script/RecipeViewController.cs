@@ -6,6 +6,7 @@ using TMPro;
 public class RecipeViewController : MonoBehaviour
 {
     TextMeshProUGUI recipeText;
+    public AudioSource RecipeSound;
     void Awake()
     {
         recipeText = GetComponentInChildren<TextMeshProUGUI>();
@@ -14,6 +15,7 @@ public class RecipeViewController : MonoBehaviour
     public void OnEnable()
     {
         //TODO Audio: Add Bringup Recipe Sound
+        RecipeSound.Play();
     }
 
     void Start()
