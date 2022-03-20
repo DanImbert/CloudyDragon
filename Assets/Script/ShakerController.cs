@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShakerController : MonoBehaviour
 {
+    public bool ToggleTransparent = true;
     public GameObject Lid;
     public GameObject OpaqueBody;
     public GameObject TransparentBody;
@@ -20,8 +21,11 @@ public class ShakerController : MonoBehaviour
     public void SetTransparent(bool value)
     {
         Lid.SetActive(!value);
-        OpaqueBody.SetActive(!value);
-        TransparentBody.SetActive(value);
+        if (ToggleTransparent)
+        {
+            OpaqueBody.SetActive(!value);
+            TransparentBody.SetActive(value);
+        }
         
     }
 }

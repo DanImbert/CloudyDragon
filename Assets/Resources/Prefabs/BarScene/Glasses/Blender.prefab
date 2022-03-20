@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: TransparentBody
       value: 
       objectReference: {fileID: 3089719928121971113}
+    - target: {fileID: 442688133042311524, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: ToggleTransparent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1956384329217926126, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.4
