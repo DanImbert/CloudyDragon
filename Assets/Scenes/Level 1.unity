@@ -239,8 +239,8 @@ Camera:
   m_GameObject: {fileID: 413279471}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1255,10 +1255,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
-    - target: {fileID: 2259970480335460012, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7292867c6a55fef4eba893aae58f6890, type: 2}
     - target: {fileID: 3920441840803411368, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -1287,14 +1283,22 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 6292685166623847540, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_Name
+      value: PearJuice Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590804580148942480, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_Name
+      value: Lychee Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751562800893364621, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_Name
+      value: Honey Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 6931196045741206139, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
-    - target: {fileID: 7120170096261493253, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d56f05e98c788794b91e8b98a806dac1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
 --- !u!1001 &2495010366700628545

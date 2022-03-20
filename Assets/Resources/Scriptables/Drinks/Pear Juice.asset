@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e0bc5db370d5d0419b350f2a16ccb2e, type: 3}
-  m_Name: White Rum
+  m_Name: Pear Juice
   m_EditorClassIdentifier: 
-  BodyColor: {r: 0.37254903, g: 0.8000001, b: 1, a: 1}
-  RimColor: {r: 1, g: 1, b: 1, a: 1}
-  RimStrength: 6
+  BodyColor: {r: 1, g: 0.8892417, b: 0.4764151, a: 1}
+  RimColor: {r: 1, g: 0.7922078, b: 0, a: 1}
+  RimStrength: 3.3
   FoamColor: {r: 0.5838377, g: 0.6037736, b: 0.5847335, a: 1}
   Foaming: 0
   DeFoaming: 0.3

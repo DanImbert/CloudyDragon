@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e0bc5db370d5d0419b350f2a16ccb2e, type: 3}
-  m_Name: Vodka
+  m_Name: Lychee Juice
   m_EditorClassIdentifier: 
   BodyColor: {r: 1, g: 1, b: 1, a: 1}
   RimColor: {r: 1, g: 0.98185354, b: 0.48584908, a: 1}

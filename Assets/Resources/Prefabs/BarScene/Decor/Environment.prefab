@@ -1372,7 +1372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6503013281044369917, guid: 5c37eb61f6425574fb48a5364ddd2ea4, type: 3}
       propertyPath: m_Name
-      value: Vodka Bottle
+      value: Lychee Bottle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c37eb61f6425574fb48a5364ddd2ea4, type: 3}
@@ -9794,15 +9794,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 25770909842178062, guid: 4188419e8e76cb94db6051e4d7790485, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.114
+      value: 0.291
       objectReference: {fileID: 0}
     - target: {fileID: 25770909842178062, guid: 4188419e8e76cb94db6051e4d7790485, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.276559
+      value: -5.81
       objectReference: {fileID: 0}
     - target: {fileID: 25770909842178062, guid: 4188419e8e76cb94db6051e4d7790485, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.199
+      value: 13.395
       objectReference: {fileID: 0}
     - target: {fileID: 25770909842178062, guid: 4188419e8e76cb94db6051e4d7790485, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9834,7 +9834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 797240681882901172, guid: 4188419e8e76cb94db6051e4d7790485, type: 3}
       propertyPath: m_Name
-      value: Rum Bottle Variant
+      value: Honey Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4188419e8e76cb94db6051e4d7790485, type: 3}
@@ -11438,7 +11438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480871977101636203, guid: 3edee671bf034dc4ba0649b4b29c99be, type: 3}
       propertyPath: m_Name
-      value: TripleSec Variant
+      value: PearJuice Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3edee671bf034dc4ba0649b4b29c99be, type: 3}
