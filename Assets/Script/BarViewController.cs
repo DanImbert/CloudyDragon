@@ -16,6 +16,7 @@ public class BarViewController : MonoBehaviour
         animator = DrinkController.GetComponent<Animator>();
         shaker = DrinkController.GetComponentInChildren<ShakerController>();
     }
+    bool touch_protection = false;
     void Update()
     {
         bool pouring = false;
@@ -24,15 +25,23 @@ public class BarViewController : MonoBehaviour
         {
             if (GameController.main.state == GameController.GameState.shaker)
             {
-                //TODO Audio: Start shaking
-                shaking = Input.touches.Length>0;
-                if (shaking && !BlendSound.isPlaying)
-                {
-                    BlendSound.Play();
+                if (Input.touches.Length > 0) {
+                    if (!touch_protection)
+                    {
+                        shaking = true;
+                        if (shaking && !BlendSound.isPlaying)
+                        {
+                            BlendSound.Play();
+                        }
+                        else if (!shaking && BlendSound.isPlaying)
+                        {
+                            BlendSound.Stop();
+                        }
+                    }
                 }
-                else if (!shaking && BlendSound.isPlaying)
+                else
                 {
-                    BlendSound.Stop();
+                    touch_protection = false;
                 }
             }
             else if (myDrink == null || !LeanTween.isTweening(myDrink.gameObject))
@@ -54,6 +63,10 @@ public class BarViewController : MonoBehaviour
         animator.SetBool("Pouring", false);
         animator.SetBool("Shaking", false);
         ClearDrink();
+    }
+    public void OnShakerMinigame()
+    {
+        touch_protection = true;
     }
     public void OnVictory()
     {
