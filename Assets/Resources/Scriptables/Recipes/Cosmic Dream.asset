@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eaa35ebbc2a1114e91fd59d80442457, type: 3}
-  m_Name: Mohito
+  m_Name: Cosmic Dream
   m_EditorClassIdentifier: 
   Requirements:
-  - Spirit: {fileID: 11400000, guid: 96c88bf04cdb0264c824f1569c0bb38c, type: 2}
-    Percentage: 0.25
-  - Spirit: {fileID: 11400000, guid: 4b5209adca9a7be43bfb3797e689abab, type: 2}
-    Percentage: 0.25
-  - Spirit: {fileID: 11400000, guid: 7411439843df16e42b8ea58638511967, type: 2}
-    Percentage: 0.5
+  - Spirit: {fileID: 11400000, guid: f25ba04504f63c64aaa8658dbc722da4, type: 2}
+    Percentage: 0.45
+  - Spirit: {fileID: 11400000, guid: a8881b5efa97c2546b36a07e31054e94, type: 2}
+    Percentage: 0.15
+  - Spirit: {fileID: 11400000, guid: 90dafc49e5a132245958f86a5bd1e85c, type: 2}
+    Percentage: 0.4
