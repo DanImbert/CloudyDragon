@@ -178,6 +178,18 @@ PrefabInstance:
       propertyPath: TransparentBody
       value: 
       objectReference: {fileID: 3089719928121971113}
+    - target: {fileID: 1956384329217926126, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956384329217926126, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956384329217926126, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1977966242420792728, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -294,21 +306,53 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 475
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.767
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7423323650376622733, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: BottleFullX
-      value: -2.21
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: BottleFullY
-      value: 1.24
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: BottleEmptyX
-      value: -0.06
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 7423323650376622734, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: BottleEmptyY
-      value: 1.84
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 7423323650443768408, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: m_RootOrder
@@ -357,6 +401,10 @@ PrefabInstance:
     - target: {fileID: 7423323650443768412, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: m_Name
       value: Blender
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400029369980666673, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
+      propertyPath: pourVolume
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8967059878704556983, guid: df7619c2692bd3f4eb65a4b2a7076f81, type: 3}
       propertyPath: m_LocalPosition.x

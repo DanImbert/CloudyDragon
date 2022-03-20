@@ -7,6 +7,7 @@ public class EndGameScreenController : MonoBehaviour
 {
     TextMeshProUGUI title;
     GameObject ScoreView;
+    public AudioSource VictorySound;
     private void Awake()
     {
         title = transform.Find("Cocktail Name").GetComponent<TextMeshProUGUI>();
@@ -26,6 +27,8 @@ public class EndGameScreenController : MonoBehaviour
         {
             ScoreView.transform.GetChild(I).gameObject.SetActive(I < score);
         }
+
+        VictorySound.gameObject.SetActive(true);
     }
 
 }

@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -3354480299382239052, guid: 551b8db2e7fd6914bbd01439152f1fa5, type: 3}
+    - target: {fileID: 940770330214081230, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 81d577067b1789642b9a2523c0aedb5f, type: 3}
     - target: {fileID: 1096450596330928000, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -106,6 +110,10 @@ PrefabInstance:
       propertyPath: mainLiquid
       value: 
       objectReference: {fileID: 11400000, guid: 4b5209adca9a7be43bfb3797e689abab, type: 2}
+    - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: pingSelect
+      value: 
+      objectReference: {fileID: 5119063360344217219}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleHeight
       value: 4
@@ -195,5 +203,10 @@ PrefabInstance:
 --- !u!4 &25770909842178062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+  m_PrefabInstance: {fileID: 5333626043031614541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5119063360344217219 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 940770330214081230, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
   m_PrefabInstance: {fileID: 5333626043031614541}
   m_PrefabAsset: {fileID: 0}

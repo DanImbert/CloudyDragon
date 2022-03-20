@@ -56,6 +56,8 @@ MonoBehaviour:
   DrinkController: {fileID: 8991532614958058374}
   BottleParent: {fileID: 8991532615342890960}
   shaker: {fileID: 0}
+  BlendSound: {fileID: 8300000, guid: 5f017c81746440949aa2db9eb9ab34c4, type: 3}
+  VictorySound: {fileID: 8300000, guid: 28c7ca609ac8aaf49a5f9cc138f86668, type: 3}
 --- !u!1 &8730353514772456720
 GameObject:
   m_ObjectHideFlags: 0

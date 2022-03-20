@@ -78,9 +78,8 @@ public class LiquidPourer : MonoBehaviour
             if (!Particle.isPlaying)
             {
                 Particle.Play();
-                //TODO Audio: Start Pouring Liquid
-                PourSound.Play();
             }
+            PourSound.Play();
             StartCoroutine(TransferLiquid(targetReciever.Container));
             yield return new WaitForSeconds(PourInterval);
         }
@@ -95,12 +94,13 @@ public class LiquidPourer : MonoBehaviour
     public void StopPouring()
     {
         if (PourCoroutine != null)
-            PourSound.Stop();
-        StopCoroutine(PourCoroutine);
+        {
+            StopCoroutine(PourCoroutine);
+        }
         //liquidTrail.emitting = false;
         Particle.Stop();
-        //TODO Audio: Stop Pouring Liquid
-        
+        PourSound.Stop();
+
         PourCoroutine = null;
     }
     protected void UpdateLiquid()

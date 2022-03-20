@@ -122,6 +122,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -3354480299382239052, guid: 345d50c525993cd4ead0f433dacc7fe8, type: 3}
+    - target: {fileID: 940770330214081230, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 98eb0c55bc38ab044b9e08ae7ebf50e6, type: 3}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: mainLiquid
       value: 
