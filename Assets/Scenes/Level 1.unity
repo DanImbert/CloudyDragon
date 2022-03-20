@@ -612,6 +612,10 @@ PrefabInstance:
       value: Blender
       objectReference: {fileID: 0}
     - target: {fileID: 6332568479856845244, guid: 62cd693c99d4c384085d7c11f32e0b7d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 6332568479856845244, guid: 62cd693c99d4c384085d7c11f32e0b7d, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
@@ -1186,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: 58.873535
       objectReference: {fileID: 0}
+    - target: {fileID: 1138217580299629659, guid: 4d94b67dd1e6af34aba1375ddaf358a1, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d94b67dd1e6af34aba1375ddaf358a1, type: 3}
 --- !u!1001 &1901569442879773974
@@ -1243,6 +1251,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 3920441840803411368, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 4200472088493561676, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 4200472089034004438, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 4254454759750865905, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 4254454761352411638, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 4363548629637269585, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 5585156427937324778, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
+    - target: {fileID: 6931196045741206139, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2ce69a0a38c6cd47a4639dce6d75943, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f094bb82bb78d504184a0576472eeb7a, type: 3}
 --- !u!1001 &2495010366700628545
@@ -1485,6 +1525,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 959006375}
+    - target: {fileID: 6630623860683159331, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6630623861381792189, guid: a09644e9acb4819438a0e0a976bd8591, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1643,6 +1687,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2.48
       objectReference: {fileID: 0}
+    - target: {fileID: 3438307482842259406, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
+      propertyPath: m_Volume
+      value: 0.971
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438307482842259406, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7679775af2d45cc458fd356189451c23, type: 3}
     - target: {fileID: 8991532614958058374, guid: 08ad74c2a53056d44b4d1228e2859b9d, type: 3}
       propertyPath: m_Name
       value: Scene Anim
