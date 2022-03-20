@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d1ebd8c39ccae49b293c797e6c2357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winCondition: {fileID: 11400000, guid: a17f45a6fcb2a284985f43b62b332222, type: 2}
+  winCondition: {fileID: 11400000, guid: a780acdae7d53ee45b4a8c3d4fa8d329, type: 2}
   BarViewMenu: {fileID: 972828133}
   ShelfViewMenu: {fileID: 894142526}
   ShakeViewMenu: {fileID: 1059204997615253767}
