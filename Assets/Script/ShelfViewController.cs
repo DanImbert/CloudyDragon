@@ -8,11 +8,12 @@ public class ShelfViewController : MonoBehaviour
     public GameObject BottleParent;
     SelectableBottle[] Interactables;
     SelectableBottle SelectedBottle;
-
+    AudioSource audioSource;
     private void Awake()
     {
         main = this;
         Interactables = GetComponentsInChildren<SelectableBottle>();
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -52,6 +53,8 @@ public class ShelfViewController : MonoBehaviour
     public void SelectBottle(SelectableBottle bottle)
     {
         SelectedBottle = bottle;
+
+        audioSource.PlayOneShot(bottle.pingSelect);
         ShelfMenuController.main.ChangeText(bottle.mainLiquid == null ? "EMPTY" : bottle.mainLiquid.name);
         SelectedBottle.MoveToPosition(transform.position + transform.forward * 5);
     }

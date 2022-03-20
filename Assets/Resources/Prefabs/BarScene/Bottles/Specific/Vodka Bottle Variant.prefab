@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: mainLiquid
       value: 
       objectReference: {fileID: 11400000, guid: f25ba04504f63c64aaa8658dbc722da4, type: 2}
+    - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: pingSelect
+      value: 
+      objectReference: {fileID: 8300000, guid: 9756d81e896df344bbb30045bbec7220, type: 3}
     - target: {fileID: 3622992265446285446, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

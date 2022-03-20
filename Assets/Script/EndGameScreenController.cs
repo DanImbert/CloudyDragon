@@ -28,7 +28,7 @@ public class EndGameScreenController : MonoBehaviour
             ScoreView.transform.GetChild(I).gameObject.SetActive(I < score);
         }
 
-        VictorySound.gameObject.SetActive(true);
+        VictorySound.Play();
     }
 
 }

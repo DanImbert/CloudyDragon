@@ -20,6 +20,9 @@ public class LiquidPourer : MonoBehaviour
         PourInterval = 1f / Particle.emission.rateOverTime.constant;
 
         UpdateLiquid();
+
+        PourSound.enabled = false;
+
         /* foreach (Transform node in LiquidEmitter.transform)
          {
              node.gameObject.SetActive(false);
@@ -79,7 +82,11 @@ public class LiquidPourer : MonoBehaviour
             {
                 Particle.Play();
             }
-            PourSound.Play();
+            if (!PourSound.enabled)
+            {
+                PourSound.Play();
+                PourSound.enabled = true;
+            }
             StartCoroutine(TransferLiquid(targetReciever.Container));
             yield return new WaitForSeconds(PourInterval);
         }
@@ -100,6 +107,7 @@ public class LiquidPourer : MonoBehaviour
         //liquidTrail.emitting = false;
         Particle.Stop();
         PourSound.Stop();
+        PourSound.enabled = false;
 
         PourCoroutine = null;
     }

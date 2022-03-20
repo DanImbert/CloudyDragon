@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: mainLiquid
       value: 
       objectReference: {fileID: 11400000, guid: 7411439843df16e42b8ea58638511967, type: 2}
+    - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
+      propertyPath: pingSelect
+      value: 
+      objectReference: {fileID: 8300000, guid: 07d75b7387b742545bc3d88b10f7ee99, type: 3}
     - target: {fileID: 4689521054424837881, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: m_Name
       value: Soda Bottle Variant

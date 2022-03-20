@@ -113,7 +113,7 @@ PrefabInstance:
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: pingSelect
       value: 
-      objectReference: {fileID: 5119063360344217219}
+      objectReference: {fileID: 8300000, guid: 81d577067b1789642b9a2523c0aedb5f, type: 3}
     - target: {fileID: 2669203035791860590, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
       propertyPath: BottleHeight
       value: 4
@@ -203,10 +203,5 @@ PrefabInstance:
 --- !u!4 &25770909842178062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5359096781814985795, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
-  m_PrefabInstance: {fileID: 5333626043031614541}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &5119063360344217219 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 940770330214081230, guid: 8975d0d54cb9c694b9baa5d99d3e60e7, type: 3}
   m_PrefabInstance: {fileID: 5333626043031614541}
   m_PrefabAsset: {fileID: 0}

@@ -9,7 +9,7 @@ public class SelectableBottle : MonoBehaviour
     public float BottleHeight = 0;
     public LiquidSO mainLiquid;
     public GameObject cork;
-    public AudioSource pingSelect;
+    public AudioClip pingSelect;
    
     private void Awake()
     {
@@ -31,7 +31,6 @@ public class SelectableBottle : MonoBehaviour
     {
         LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, pos, .25f);
-        pingSelect.Play();
     }
     public void ResetPosition()
     {
