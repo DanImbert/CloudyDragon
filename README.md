@@ -1,6 +1,6 @@
 # CloudyDragon
 
-## Audio Implementation — Liquid Pouring (Unity)
+## Audio Implementation (Unity)
 
 Gameplay-driven pouring interaction with state-based audio playback and
 tilt-controlled intensity.
