@@ -23,3 +23,15 @@ public void StartPouring()
 
     pourAudio?.StartLoop();
 }
+
+void UpdatePourAudio()
+{
+    float tiltAmount = Mathf.Clamp01(-transform.up.y);
+    pourAudio?.SetIntensity(tiltAmount);
+}
+
+public void StopPouring()
+{
+    Particle.Stop();
+    pourAudio?.StopLoop();
+}
